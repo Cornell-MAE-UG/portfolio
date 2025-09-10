@@ -18,15 +18,9 @@ The workflow of editing and publishing your portfolio goes as follows:
 ## Creating a Local Copy
 There are three ways to set up a working copy of the portfolio code for you to edit. From easy to hard: you can either **create an online workspace** on called "Codespace", or clone the code directly **inside Visual Studio Code** for editing, committing, and pushing, or **use the git command line interface (CLI)** to maintain your local copy.
 
-### Using Codespaces
-
-You can use the online [Codespaces](https://github.com/features/codespaces) environments for development. Please read more about this feature through the following [link](https://github.com/features/codespaces). This option is available to you through the "Code" button as shown in the image below. This starts an online space for you to edit, test, and commit your work.
-
-<img src="assets/images/codespace-button.png" width="400" />
-
 ### Using Visual Studio Code
 
-Alternatively, you can use [VS Code](https://code.visualstudio.com/) to clone your code, edit, test, and publish it from your laptop. This means you can work offline and generally have full control of your code. 
+You can use [VS Code](https://code.visualstudio.com/) to clone your code, edit, test, and publish it from your laptop. This means you can work offline and generally have full control of your code. 
 
 Download and install VS Code. When you open it, choose "Clone Git Repository" to start a new project from your repository. Then enter the repo URL (also under the "Code" button in GitHub). 
 
@@ -34,6 +28,12 @@ Download and install VS Code. When you open it, choose "Clone Git Repository" to
 
 
 You can then use VS Code for editing and [Git actions](https://code.visualstudio.com/docs/sourcecontrol/overview). Please refer to the [VS Code documentation](https://code.visualstudio.com/docs/) for more information. 
+
+### Using Codespaces
+
+Alternatively, you can use the online [Codespaces](https://github.com/features/codespaces) environments for development. Please read more about this feature through the following [link](https://github.com/features/codespaces). This option is available to you through the "Code" button as shown in the image below. This starts an online space for you to edit, test, and commit your work.
+
+<img src="assets/images/codespace-button.png" width="400" />
 
 ### Using the Git CLI
 
