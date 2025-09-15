@@ -164,7 +164,7 @@ In VS Code or Codespaces, you can use the Git interface inside the development e
 
 Follow these steps to publish your portfolio:
 
-1. In your `_config.yml` file, set the `base_url` to your portfolio repo name (e.g., `"/spring-2025-portfolio-Hoffman/"`)
+1. In your `_config.yml` file, set the `baseurl` to your portfolio repo name (e.g., `"/spring-2025-portfolio-Hoffman/"`)
 
 
 1. Go to your repository's Settings
