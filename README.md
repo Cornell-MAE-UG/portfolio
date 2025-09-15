@@ -116,7 +116,13 @@ and then Ruby:
 brew install ruby
 ```
 
-Verify that you have the latest Ruby version: 
+Make sure your system uses the `homebrew` version, add the following line to either `~/.bashrc` or `~/.zshrc`. Do determine what shell you are using, you can run `echo $SHELL`.
+
+```
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+```
+
+Close your terminal and reopen it to load your configuration. Now verify that you have the latest Ruby version: 
 ```
 ruby -v
 ```
