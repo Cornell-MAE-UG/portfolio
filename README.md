@@ -22,7 +22,10 @@ There are three ways to set up a working copy of the portfolio code for you to e
 
 You can use [VS Code](https://code.visualstudio.com/) to clone your code, edit, test, and publish it from your laptop. This means you can work offline and generally have full control of your code. 
 
-Download and install VS Code. When you open it, choose "Clone Git Repository" to start a new project from your repository. Then enter the repo URL (also under the "Code" button in GitHub). 
+
+Download and install VS Code. **Windows users:** If you do not have Git installed, [download and install Git](https://git-scm.com/downloads).
+
+When you open VS Code, choose "Clone Git Repository" to start a new project from your repository. Then enter the repo URL (also under the "Code" button in GitHub). 
 
 <img src="assets/images/vscode-clone.jpg" width="500" />
 
