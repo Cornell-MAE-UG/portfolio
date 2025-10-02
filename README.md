@@ -124,7 +124,10 @@ Close your terminal and reopen it to load your configuration. Now verify that yo
 ruby -v
 ```
 
-On Windows, you can use [RubyInstaller](https://rubyinstaller.org/).
+On Windows, you can use [RubyInstaller](https://rubyinstaller.org/), but that does not install `bundler`. In the Windows case you need to run:
+```
+gem install bundler
+```
 
 ### Install Packages (once)
 
