@@ -103,6 +103,7 @@ Once you made your changes, or at any time you wish to, you can test your change
 
 To run `bundle`, you need Ruby installed on your machine. 
 
+#### MacOS
 For MacOS, the recommended path is to install [`homebrew`](https://brew.sh/): 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -124,6 +125,7 @@ Close your terminal and reopen it to load your configuration. Now verify that yo
 ruby -v
 ```
 
+#### Windows
 On Windows, you can use [RubyInstaller](https://rubyinstaller.org/), but that does not install `bundler`. In the Windows case you need to run:
 ```
 gem install bundler
