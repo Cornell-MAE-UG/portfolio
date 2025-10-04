@@ -16,7 +16,7 @@ The workflow of editing and publishing your portfolio goes as follows:
 ---
 
 ## Creating a Local Copy
-There are three ways to set up a working copy of the portfolio code for you to edit. From easy to hard: you can either **create an online workspace** on called "Codespace", or clone the code directly **inside Visual Studio Code** for editing, committing, and pushing, or **use the git command line interface (CLI)** to maintain your local copy.
+There are three ways to set up a working copy of the portfolio code for you to edit. From easy to hard: you can either clone the code directly **inside Visual Studio Code** for editing, committing, and pushing,  **create an online workspace** on a so-called "Github Codespace", or **use the git command line interface (CLI)** to maintain your local copy.
 
 ### Using Visual Studio Code
 
@@ -100,11 +100,14 @@ skin: aqua
 
 ## Running the Site Locally
 
-Once you made your changes, or at any time you wish to, you can test your changes locally, by running `bundle`. All of this happens **in the terminal**, either on Codespaces, or in VS Code, or directly in your terminal app, depending on how you set up your local code.
+Once you made your changes, or at any time you wish to, you can test your changes locally, by running `bundle`. All of this happens **in the terminal**, either in VS Code, or on Codespaces, or directly in your terminal app, depending on how you set up your local code.
 
 ### Prerequisites
 
 To run `bundle`, you need Ruby installed on your machine. 
+
+#### Codespace
+Codespaces should have Ruby, RubyGems, and Bundler installed. No further installation necessary.
 
 #### MacOS
 For MacOS, the recommended path is to install [`homebrew`](https://brew.sh/): 
