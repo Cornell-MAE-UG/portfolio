@@ -1,8 +1,10 @@
 # Portfolio Instructions
 
+> [!WARNING]  This README file might be out of date with the latest instructions. Please refer to the [Original Repository README file](https://github.com/Cornell-MAE-UG/portfolio/blob/main/README.md) for up-to-date instructions.
+
 This is a template for you to start building your professional portfolio. It is also part of your journey at MAE and will be reviewed, as needed, by your instructor and the Undergraduate Program Office.
 
-Note that you are looking at your personal copy of the portfolio template repository. It was created automatically when you accepted the Assignment through the GitHub Classroom link you were provided. Once you are up and running, you can delete this README file and replace it with your own content if you wish. You can always refer back to these instructions on the [Original Repository README file](https://github.com/Cornell-MAE-UG/portfolio/blob/main/README.md).
+Note that you are looking at your personal copy of the portfolio template repository. It was created automatically when you accepted the Assignment through the GitHub Classroom link you were provided. Once you are up and running, you can delete this README file and replace it with your own content if you wish. 
 
 In the following sections, you will find instructions on how to edit, test, and publish your portfolio.
 
