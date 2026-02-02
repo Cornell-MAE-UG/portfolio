@@ -2,58 +2,51 @@
 
 This is a template for you to start building your professional portfolio. It is also part of your journey at MAE and will be reviewed, as needed, by your instructor and the Undergraduate Program Office.
 
-Note that this is your personal copy of the portfolio template repository. It was created automatically when you accepted the Assignment through the GitHub Classroom link you were provided.
+Note that you are looking at your personal copy of the portfolio template repository. It was created automatically when you accepted the Assignment through the GitHub Classroom link you were provided. Once you are up and running, you can delete this README file and replace it with your own content if you wish. You can always refer back to these instructions on the [Original Repository README file](https://github.com/Cornell-MAE-UG/portfolio/blob/main/README.md).
+
+In the following sections, you will find instructions on how to edit, test, and publish your portfolio.
 
 ## Portfolio Editing Workflow
-The workflow of editing and publishing your portfolio goes as follows:
 
-1. **Create a local copy** of your portfolio, either on your computer or in an online "Codespace".
-2. **Edit any relevant template files**, add images, new project pages, text, etc. Remember to [commit](https://docs.github.com/en/get-started/using-git/about-git#basic-git-commands) often to save your progress.
+It's important to understand the logic of the workflow to edit and publish your portfolio. The process goes as follows:
+
+1. **Create a working copy** of your portfolio, either in an online "Codespace" or on your local machine. 
+Your portfolio is currently stored on GitHub. You _could_ edit it directly on there, but this is inconvenient, inefficient, and error-prone. 
+> In a realistic work setting, you would never edit code directly on a server.
+2. On you working copy, you **edit any relevant files**, add images, new project pages, text, etc. 
+Remember to [commit](https://docs.github.com/en/get-started/using-git/about-git#basic-git-commands) often to save your progress. 
 3. Test out your portfolio by **running a local test server** and see if it looks as planned.
-4. If you're happy, make sure everything is committed and **push your changes to Github**. This will publish your portfolio on the Internet.
+4. If you're happy, make sure everything is committed and **push your changes to Github**. Then publish your portfolio through GitHub Pages.
+> Every time you push new changes, this will initiate a process by which GitHub publish your updated portfolio on the Internet. **Make sure you understand** what edits are local to your working copy and which are pushed (sent to) the central repository on GitHub and thus public.
 5. Rinse and repeat from Step 2 above. 
+
+We will go through each of these steps in the following sections. 
 
 ---
 
-## Creating a Local Copy
-There are three ways to set up a working copy of the portfolio code for you to edit. From easy to hard: you can either clone the code directly **inside Visual Studio Code** for editing, committing, and pushing,  **create an online workspace** on a so-called "Github Codespace", or **use the git command line interface (CLI)** to maintain your local copy.
+## Step 1: Creating a Working Copy
 
-### Using Visual Studio Code
-
-You can use [VS Code](https://code.visualstudio.com/) to clone your code, edit, test, and publish it from your laptop. This means you can work offline and generally have full control of your code. 
-
-
-Download and install VS Code. **Windows users:** If you do not have Git installed, [download and install Git](https://git-scm.com/downloads).
-
-When you open VS Code, choose "Clone Git Repository" to start a new project from your repository. Then enter the repo URL (also under the "Code" button in GitHub). 
-
-<img src="assets/images/vscode-clone.jpg" width="500" />
-
-
-You can then use VS Code for editing and [Git actions](https://code.visualstudio.com/docs/sourcecontrol/overview). Please refer to the [VS Code documentation](https://code.visualstudio.com/docs/) for more information. 
-
-### Using Codespaces
-
-Alternatively, you can use the online [Codespaces](https://github.com/features/codespaces) environments for development. Please read more about this feature through the following [link](https://github.com/features/codespaces). This option is available to you through the "Code" button as shown in the image below. This starts an online space for you to edit, test, and commit your work.
+You will set up your local copy on an online [Codespaces](https://github.com/features/codespaces) environment for development. You create a Codespace through the "Code" button as shown in the image below. This starts an online server with a development environment that enables you to edit, test, commit, and push your work.
 
 <img src="assets/images/codespace-button.png" width="400" />
 
-### Using the Git CLI
+Note that editing, saving, and committing on Codespaces is not the same as editing directly on GitHub. When you make changes on Codespaces, you still need to commit and push your changes to GitHub to publish them online. Also, when you run a test server on Codespaces, it is running a temporary server that you can use to debug, but it is not considered "published" until you push your changes to GitHub.
 
-Finally, if you are an advanced user, you can simply clone your repository to your local machine using the Git command line interface in the terminal, and then use any text editing software you prefer to edit the files. 
+### For Advanced Users
 
-Use the terminal to commit and push your files and run the local test server.
+For more efficient operation, you can clone the code to your own laptop using a tool like [Visual Studio Code](https://code.visualstudio.com/) for editing, committing, and git commands. You might need to work around some configuration issues which are automatically solved on the Codespace machine, but the upside is that you can work offline and do changes and preview them faster.
 
-```bash
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
-```
+If you have experience with command lines on terminals, you can also use the git command line interface (CLI) to maintain your local copy and use whatever editor you want to edit your portfolio.
+
+Please refer to the [Jekyll](https://jekyllrb.com/) and [GitHub Pages](https://pages.github.com/) documentation for more advanced usage.
 
 ---
 
-## Editing the Files to Personalize Your Portfolio
+## Step 2: Editing the Files to Personalize Your Portfolio
 
-GitHub Pages, the framework powering the portfolio system, uses [Jekyll](https://jekyllrb.com/) as the core technology. This means you will use [GitHub Pages Markdown](https://www.markdownguide.org/tools/github-pages/) to edit your files. 
+
+Let's get you up and running with some basic edits to personalize your portfolio.
+> No need to keep the `< >` brackets. They are just there to indicate placeholders.
 
 ### Name
 
@@ -63,7 +56,6 @@ Change references to `<Your Name>` to your actual name in the following files:
 - `projects.md`
 - `cv.md`
 
-No need to keep the `< >` brackets. They are just there to indicate placeholders.
 
 ### Homepage
 - `index.md`: Replace the placeholder text with a welcome or pitch paragraph about yourself.
@@ -71,16 +63,16 @@ No need to keep the `< >` brackets. They are just there to indicate placeholders
 
 ### Projects
 - In the `_projects` folder: Use the provided example pages (e.g., `2022-trig-analysis.md`) to build one page per project.
-- Each project has a main (square) project image, set in the page's top matter by the `image` variable.
+- Each project has a main (square) project image, set in the page's top matter by the `image` variable in the preamble on the top of the page (the part between the `---` lines).
 - All images are in `assets/images`. Delete the ones you don't need.
-- It is useful to name the page with a leading date. This will determine the order of projects on your main portfolio gallery.
-- You can also develop another ordering by naming the projects with some numerical prefix.
+- It is useful to name the page with a leading date. This will determine the order of projects on your main portfolio gallery. You can also develop another ordering by naming the projects with some numerical prefix.
 - The example project pages show you how to include code and images in the portfolio page.
-- Refer to the Jekyll Markdown documentation for other formatting tips
+- Refer to the [Jekyll Markdown documentation](https://jekyllrb.com/docs/markdown/) for other formatting tips.
+- Delete the example project pages when you are done.
 
 ### CV
 - `assets/CV.pdf`: Replace this placeholder with your own PDF CV.
-- You can either edit or delete the placeholder CV markdown text.
+- You can either edit or delete the placeholder CV markdown text. This is up to you
 
 ### Color Schemes
 
@@ -98,44 +90,11 @@ skin: aqua
 
 ---
 
-## Running the Site Locally
+## Step 3: Running the Site Locally for Testing
 
-Once you made your changes, or at any time you wish to, you can test your changes locally, by running `bundle`. All of this happens **in the terminal**, either in VS Code, or on Codespaces, or directly in your terminal app, depending on how you set up your local code.
+Once you made your changes, or at any time you wish to, you can test your changes by running a local web server, using the `bundle` command. All of this happens **in the terminal** on Codespaces, or, for advanced users in VS Code or directly in your terminal app.
 
-### Prerequisites
-
-To run `bundle`, you need Ruby installed on your machine. 
-
-#### Codespace
-Codespaces should have Ruby, RubyGems, and Bundler installed. No further installation necessary.
-
-#### MacOS
-For MacOS, the recommended path is to install [`homebrew`](https://brew.sh/): 
-```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-and then Ruby:
-```
-brew install ruby
-```
-
-Make sure your system uses the `homebrew` version, add the following line to either `~/.bashrc` or `~/.zshrc`. Do determine what shell you are using, you can run `echo $SHELL`.
-
-```
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-```
-
-Close your terminal and reopen it to load your configuration. Now verify that you have the latest Ruby version: 
-```
-ruby -v
-```
-
-#### Windows
-On Windows, you can use [RubyInstaller](https://rubyinstaller.org/), but that does not install `bundler`. In the Windows case you need to run:
-```
-gem install bundler
-```
+Open the terminal in your codespace by going to the top menu and selecting `Terminal -> New Terminal`.
 
 ### Install Packages (once)
 
@@ -160,11 +119,11 @@ You can access the site at the URL shown by the `serve` command. It looks someth
 
 ---
 
-## Publishing your Portfolio to the Web
+## Step 4: Publishing your Portfolio to the Web
 
 ### Push your Changes to GitHub
 
-Once everything looks good, commit and push your changes. In the command line, run the following commands. Ideally, you would have added and committed many times locally before pushing to Github.
+Once everything looks good, commit and push your changes. In the terminal, run the following commands. Ideally, you would have added and committed many times locally before pushing to Github.
 
 ```bash
 git add .
@@ -176,9 +135,9 @@ In VS Code or Codespaces, you can use the Git interface inside the development e
 
 ### Set Up GitHub Pages
 
-Follow these steps to publish your portfolio:
+Finally, for publishing your portfolio, follow these steps:
 
-1. In your `_config.yml` file, set the `baseurl` to your portfolio repo name (e.g., `"/spring-2025-portfolio-Hoffman/"`)
+1. In your `_config.yml` file, set the `baseurl` to your portfolio repo name (e.g., `"/fa26-portfolio-hoffman/"`)
 
 
 1. Go to your repository's Settings
@@ -202,7 +161,7 @@ If you add plugins and add-ons, you might need to publish using your own Gemfile
 
 ---
 
-## More Customization: Using Other Jekyll Themes
+## Advanced Customization: Using Other Jekyll Themes
 
 You can change the style of any component of the portfolio editing the `custom.scss` file, which is written in the [Sass](https://sass-lang.com/) language.
 
