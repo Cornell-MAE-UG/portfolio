@@ -1,10 +1,10 @@
-# Portfolio Instructions
+> ⚠️ Due to occasional updates, this README file might be out of date with the latest instructions. Please refer to the [Original Repository README file](https://github.com/Cornell-MAE-UG/portfolio/blob/main/README.md) for up-to-date instructions.
 
-> ⚠️ This README file might be out of date with the latest instructions. Please refer to the [Original Repository README file](https://github.com/Cornell-MAE-UG/portfolio/blob/main/README.md) for up-to-date instructions.
+# Portfolio Instructions
 
 This is a template for you to start building your professional portfolio. It is also part of your journey at MAE and will be reviewed, as needed, by your instructor and the Undergraduate Program Office.
 
-Note that you are looking at your personal copy of the portfolio template repository. It was created automatically when you accepted the Assignment through the GitHub Classroom link you were provided. Once you are up and running, you can delete this README file and replace it with your own content if you wish. 
+This is your personal copy of the portfolio template repository. It was created automatically when you accepted the Assignment through the GitHub Classroom link you were provided. Once you are up and running, you can delete this README file or replace it with your own content if you wish. 
 
 In the following sections, you will find instructions on how to edit, test, and publish your portfolio.
 
@@ -12,14 +12,14 @@ In the following sections, you will find instructions on how to edit, test, and 
 
 It's important to understand the logic of the workflow to edit and publish your portfolio. The process goes as follows:
 
-1. **Create a working copy** of your portfolio, either in an online "Codespace" or on your local machine. 
-Your portfolio is currently stored on GitHub. You _could_ edit it directly on there, but this is inconvenient, inefficient, and error-prone. 
+1. Once: **Create a working copy** of your portfolio.
+Your portfolio is initially stored on GitHub. You _could_ edit it directly on there, but this is inconvenient, inefficient, and error-prone. 
 > In a realistic work setting, you would never edit code directly on a server.
 2. On you working copy, you **edit any relevant files**, add images, new project pages, text, etc. 
 Remember to [commit](https://docs.github.com/en/get-started/using-git/about-git#basic-git-commands) often to save your progress. 
-3. Test out your portfolio by **running a local test server** and see if it looks as planned.
+3. Once you made changes, **test out your portfolio by running a local test webserver** and see if it looks as planned.
 4. If you're happy, make sure everything is committed and **push your changes to Github**. Then publish your portfolio through GitHub Pages.
-> Every time you push new changes, this will initiate a process by which GitHub publish your updated portfolio on the Internet. **Make sure you understand** what edits are local to your working copy and which are pushed (sent to) the central repository on GitHub and thus public.
+> Once your portfolio is live on the internet, every time you push new changes, GitHub will publish your updated portfolio to the Internet. This usually takes a few minutes before it is live. Make sure you understand which edits are local to your working copy and which are pushed (sent to) the central repository on GitHub and thus public. Also, make sure you understand when you are looking at the portfolio on your local test server and when you are viewing the live version on GitHub Pages.
 5. Rinse and repeat from Step 2 above. 
 
 We will go through each of these steps in the following sections. 
@@ -34,9 +34,9 @@ You will set up your local copy on an online [Codespaces](https://github.com/fea
 
 Note that editing, saving, and committing on Codespaces is not the same as editing directly on GitHub. When you make changes on Codespaces, you still need to commit and push your changes to GitHub to publish them online. Also, when you run a test server on Codespaces, it is running a temporary server that you can use to debug, but it is not considered "published" until you push your changes to GitHub.
 
-### For Advanced Users
+#### For Advanced Users
 
-For more efficient operation, you can clone the code to your own laptop using a tool like [Visual Studio Code](https://code.visualstudio.com/) for editing, committing, and git commands. You might need to work around some configuration issues which are automatically solved on the Codespace machine, but the upside is that you can work offline and do changes and preview them faster.
+For more efficient operation, you can clone the code to your own laptop using a tool like [Visual Studio Code](https://code.visualstudio.com/). You can use VS Code for editing, committing, testing, and other git commands. If you do so, you might need to work around some configuration issues which are automatically solved on the Codespace machine, but the upside is that you can work offline and do changes and preview them faster.
 
 If you have experience with command lines on terminals, you can also use the git command line interface (CLI) to maintain your local copy and use whatever editor you want to edit your portfolio.
 
@@ -52,16 +52,16 @@ Let's get you up and running with some basic edits to personalize your portfolio
 
 ### Name
 
-Change references to `<Your Name>` to your actual name in the following files:
+Change any references to `Your Name` or `<Your Name>` to your actual name in the following files:
 - `_config.yml`
 - `index.md`
-- `projects.md`
-- `cv.md`
+- `_pages/projects.md`
+- `_pages/cv.md`
 
 
 ### Homepage
-- `index.md`: Replace the placeholder text with a welcome or pitch paragraph about yourself.
-- `assets/images/profile-pic.jpg`: Replace the placeholder with a portrait of yourself.
+- In `index.md`: Replace the placeholder text with a welcome or pitch paragraph about yourself.
+- Replace the placeholder image `assets/images/profile-pic.jpg` with a portrait of yourself.
 
 ### Projects
 - In the `_projects` folder: Use the provided example pages (e.g., `2022-trig-analysis.md`) to build one page per project.
@@ -73,7 +73,7 @@ Change references to `<Your Name>` to your actual name in the following files:
 - Delete the example project pages when you are done.
 
 ### CV
-- `assets/CV.pdf`: Replace this placeholder with your own PDF CV.
+- Replace the placeholder `assets/CV.pdf` with your own PDF CV.
 - You can either edit or delete the placeholder CV markdown text. This is up to you
 
 ### Color Schemes
@@ -89,6 +89,19 @@ Example:
 ```yaml
 skin: aqua
 ```
+Make any other changes you would like to your portfolio. You can edit the `sass/custom.scss` file to change colors, fonts, and other styling options.
+
+### Commit Your Changes
+
+After making changes, remember to commit them often to save your progress. In the terminal, run the following commands:
+
+```bash
+git add .
+git commit -m "<Commit Message>"
+```
+
+Write a meaningful commit message that describes the changes you made.
+On VS Code or Codespaces, you can also use the Git interface inside the development environment to stage (add) and commit your changes. The Git interface usually shows up as a small branch icon on the left sidebar. You can learn how to use it [here](https://code.visualstudio.com/docs/editor/versioncontrol).
 
 ---
 
@@ -96,7 +109,7 @@ skin: aqua
 
 Once you made your changes, or at any time you wish to, you can test your changes by running a local web server, using the `bundle` command. All of this happens **in the terminal** on Codespaces, or, for advanced users in VS Code or directly in your terminal app.
 
-Open the terminal in your codespace by going to the top menu and selecting `Terminal -> New Terminal`.
+By default, the terminal is at the bottom of the Codespace. If it was closed or hidden for some reason, you can open the terminal in your codespace by going to the top left menu (three horizontal lines) and selecting `Terminal -> New Terminal`.
 
 ### Install Packages (once)
 
@@ -108,7 +121,7 @@ bundle install
 ### Running the Local Portfolio Server
 Then, to run the server you run the `jekyll serve` command:
 ```bash
-bundle exec jekyll serve
+bundle exec jekyll serve --baseurl=""
 ```
 
 Note that many updates to your code are automatically reloaded into the web server. However, some changes, notably to `_config.yml` require a restart of the jekyll server.
@@ -119,9 +132,13 @@ You can access the site at the URL shown by the `serve` command. It looks someth
   Server running... press ctrl-c to stop.
 ```
 
+On both Codespace and your laptop, you can Cmd-click (Mac) or Ctrl-click (Windows) the URL to open it in a new browser tab. On your laptop, you can also just open your browser and go to `http://localhost:4000/`.
+
 ---
 
 ## Step 4: Publishing your Portfolio to the Web
+
+Remember, your portfolio is not live on the web until you push your changes to GitHub and set up GitHub Pages. What you are viewing on your local test server is only on your local machine (or Codespace) and neither permanent nor visible to the public.
 
 ### Push your Changes to GitHub
 
@@ -139,10 +156,13 @@ In VS Code or Codespaces, you can use the Git interface inside the development e
 
 Finally, for publishing your portfolio, follow these steps:
 
-1. In your `_config.yml` file, set the `baseurl` to your portfolio repo name (e.g., `"/fa26-portfolio-hoffman/"`)
+1. In your `_config.yml` file, set the `baseurl` to your portfolio repo name (e.g., `"/sp26-portfolio-hoffman/"`). Commit and push this change to GitHub.
 
+```yaml
+baseurl: "/<your-repo>/"
+```
 
-1. Go to your repository's Settings
+2. Go to your repository's Settings
 <img src="assets/images/settings.png" width="600" />
 
 3. Choose the "Pages" tab under "Build and Deployment", verify that "Source" says "Deploy from a branch" and under "Branch" choose `main` and `/ (root)`
@@ -151,7 +171,7 @@ Finally, for publishing your portfolio, follow these steps:
 4. Don't forget to save this setting at the bottom of the page.
 
 ### Your Published Portfolio Site
-Your portfolio should be live at `https://cornell-mae-ug.github.io/<your-repo>/`, where `your-repo` is this repository's name, probably `portfolio-<your-github-username>`. This URL is also shown in your Pages setting tab.
+After a few minutes, your portfolio should be live at `https://cornell-mae-ug.github.io/<your-repo>/`, where `your-repo` is this repository's name, probably `portfolio-<your-github-username>`. This URL is also shown in your Pages setting tab.
 
 :tada:
 
