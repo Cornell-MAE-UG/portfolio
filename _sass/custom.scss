@@ -2,20 +2,42 @@
 $primary-color: #3a3f58;
 $background-color: #f7f8fa;
 $text-color: #333;
+$link-color: #3a3f58;
 
 // Set theme colors based on the color_scheme variable
 @if $color_scheme == 'dark' {
   $primary-color: #333;
   $background-color: #000;
   $text-color: #fff;
+  $link-color: #8ab4f8; // links stay light so they are readable on black
 } @else if $color_scheme == 'aqua' {
-  $primary-color: #598392;
+  $primary-color: #3f6472;
   $background-color: #eff6e0;
   $text-color: #01161e;
+  $link-color: #3f6472;
 } @else if $color_scheme == 'desert' {
-  $primary-color: #925959;
+  $primary-color: #7a4444;
   $background-color: #f6f1e0;
   $text-color: #1e0101;
+  $link-color: #7a4444;
+}
+
+// Bootstrap's .navbar-dark colours nav links at 55% white, which is too faint
+// to read on the lighter schemes. 85% still marks the active page as brighter.
+.navbar-dark {
+  --bs-navbar-color: rgba(255, 255, 255, 0.85);
+  --bs-navbar-hover-color: #fff;
+  --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.5);
+}
+
+// The menu button's icon comes from Bootstrap at the same faint 55% white.
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+// Links inside the page body, which Bootstrap would otherwise leave bright blue.
+main a {
+  color: $link-color;
 }
 
 
@@ -40,7 +62,6 @@ body {
 header, footer {
   padding: 10px 5px;
   background: $primary-color;
-  color: $background-color;
 }
 
 header {
@@ -90,7 +111,7 @@ footer {
 .highlight .nb { color: #82aaff; }
 .highlight .s { color: #c3e88d; }
 .highlight .mi { color: #f78c6c; }
-.highlight .c { color: #5c6370; }
+.highlight .c { color: #9aa2b1; }
 .highlight .p { color: #89ddff; }
 .highlight .o { color: #ff5370; }
 
@@ -186,7 +207,7 @@ footer {
 .back-arrow {
   display: inline-block;
   font-size: 1.1em;
-  color: #686d85; 
+  color: $text-color;
   text-decoration: none;
   margin-bottom: 1em;
   font-weight: bold;
@@ -194,7 +215,7 @@ footer {
 }
 
 .back-arrow:hover {
-  color: #3a3f58; 
+  text-decoration: underline;
   transform: translateX(-4px);
 }
 

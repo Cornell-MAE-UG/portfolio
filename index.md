@@ -3,7 +3,7 @@ layout: default
 title: <Your Name>
 ---
 
-## About Me
+# About Me
 
 
 ![Profile Picture]({{ "assets/images/profile-pic.jpg" | relative_url }}){: class="profile-image"}

@@ -41,3 +41,13 @@ kramdown:
 plugins:
   - jekyll-feed
 
+# Files that live in this repository but are never published to the web.
+# Setting this replaces Jekyll's own default list, so the Gemfile and vendor
+# entries below are the defaults kept in place, not new ones.
+exclude:
+  - README.md
+  - assets/readme/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+

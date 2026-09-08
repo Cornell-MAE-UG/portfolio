@@ -4,6 +4,8 @@ title: <Your Name> - Portfolio
 permalink: /projects/
 ---
 
+# Projects
+
 <div class="gallery-container">
 <div class="project-gallery">
     {% for project in site.projects %}

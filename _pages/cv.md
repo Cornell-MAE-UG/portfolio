@@ -3,7 +3,7 @@ layout: default
 title: <Your Name> - Curriculum Vitae
 permalink: /cv/
 ---
-## Curriculum Vitae
+# Curriculum Vitae
 
 [Download my CV]({{ "/assets/CV.pdf" | relative_url }}) in PDF format.
 
@@ -12,26 +12,26 @@ permalink: /cv/
 
 ---
 
-#### Objective
+## Objective
 Aspiring engineering student with a strong foundation in.... Passionate about ... and eager to apply my knowledge in real-world applications.
 
 ---
 
-#### Education
+## Education
 - **Cornell University**  
   *Bachelor of Science in Mechanical and Aerospace Engineering*  
   Graduation: Month, Year
 
 ---
 
-#### Skills
+## Skills
 - **Software:** Autodesk Fusion 360, SolidWorks, ANSYS  
 - **Programming:** Python, MATLAB  
 - **Tools:** 3D Printing, Laser Cutting  
 
 ---
 
-#### Projects
+## Projects
 - **[Project Title]**:  
   *[Short Description]*  
   - Key Achievement 1  
@@ -44,7 +44,7 @@ Aspiring engineering student with a strong foundation in.... Passionate about ..
 
 ---
 
-#### Work Experience
+## Work Experience
 - **[Company Name] - Intern**  
   [Month, Year] - [Month, Year]  
   - Responsibility 1  
@@ -52,19 +52,19 @@ Aspiring engineering student with a strong foundation in.... Passionate about ..
 
 ---
 
-#### Achievements & Certifications
+## Achievements & Certifications
 - [Certification Name], [Issuing Organization], [Year]  
 - [Achievement Name], [Competition/Event], [Year]  
 
 ---
 
-#### Extracurricular Activities
+## Extracurricular Activities
 - Member of [Club/Organization Name]  
 - Volunteer for [Event/Organization Name]  
 
 ---
 
-#### References
+## References
 Available upon request.
 
 ---

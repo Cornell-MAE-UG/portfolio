@@ -33,6 +33,9 @@ Gemfile.lock
 # VS Code specific settings
 .vscode/
 
+# Your private files. Anything in here is never committed and never published.
+private/
+
 # Claude Code files
 CLAUDE.md
 
