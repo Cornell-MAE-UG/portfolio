@@ -30,7 +30,7 @@ We will go through each of these steps in the following sections.
 
 You will set up your local copy on an online [Codespaces](https://github.com/features/codespaces) environment for development. You create a Codespace through the "Code" button as shown in the image below. This starts an online server with a development environment that enables you to edit, test, commit, and push your work.
 
-<img src="assets/images/codespace-button.png" width="400" />
+<img src="assets/readme/codespace-button.png" width="400" />
 
 Note that editing, saving, and committing on Codespaces is not the same as editing directly on GitHub. When you make changes on Codespaces, you still need to commit and push your changes to GitHub to publish them online. Also, when you run a test server on Codespaces, it is running a temporary server that you can use to debug, but it is not considered "published" until you push your changes to GitHub.
 
@@ -66,7 +66,7 @@ Change any references to `Your Name` or `<Your Name>` to your actual name in the
 ### Projects
 - In the `_projects` folder: Use the provided example pages (e.g., `2022-trig-analysis.md`) to build one page per project.
 - Each project has a main (square) project image, set in the page's top matter by the `image` variable in the preamble on the top of the page (the part between the `---` lines).
-- All images are in `assets/images`. Delete the ones you don't need.
+- All portfolio images are in `assets/images`. Delete the ones you don't need. (The screenshots used by this README live separately, in `assets/readme`.)
 - It is useful to name the page with a leading date. This will determine the order of projects on your main portfolio gallery. You can also develop another ordering by naming the projects with some numerical prefix.
 - The example project pages show you how to include code and images in the portfolio page.
 - Refer to the [Jekyll Markdown documentation](https://jekyllrb.com/docs/markdown/) for other formatting tips.
@@ -163,10 +163,10 @@ baseurl: "/<your-repo>/"
 ```
 
 2. Go to your repository's Settings
-<img src="assets/images/settings.png" width="600" />
+<img src="assets/readme/settings.png" width="600" />
 
 3. Choose the "Pages" tab under "Build and Deployment", verify that "Source" says "Deploy from a branch" and under "Branch" choose `main` and `/ (root)`
-<img src="assets/images/pages-settings.png" width="600" />
+<img src="assets/readme/pages-settings.png" width="600" />
 
 4. Don't forget to save this setting at the bottom of the page.
 

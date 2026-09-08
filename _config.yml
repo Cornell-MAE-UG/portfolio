@@ -40,5 +40,4 @@ kramdown:
 # Plugins (previously gems:)
 plugins:
   - jekyll-feed
-  - jekyll-include-cache
 
