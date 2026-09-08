@@ -82,14 +82,14 @@ The provided template comes with multiple color schemes. To choose a scheme:
 
 1. Open the `_config.yml` file.
 2. Look for the `color_scheme` setting.
-3. Change the value to the desired skin name. Refer to the inline comment in `_config.yml` for available skin options.
+3. Change the value to the desired scheme name. Refer to the inline comment in `_config.yml` for the available options.
 
 
 Example:
 ```yaml
-skin: aqua
+color_scheme: aqua
 ```
-Make any other changes you would like to your portfolio. You can edit the `sass/custom.scss` file to change colors, fonts, and other styling options.
+Make any other changes you would like to your portfolio. You can edit the `_sass/custom.scss` file to change colors, fonts, and other styling options.
 
 ### Commit Your Changes
 
@@ -185,7 +185,7 @@ If you add plugins and add-ons, you might need to publish using your own Gemfile
 
 ## Advanced Customization: Using Other Jekyll Themes
 
-You can change the style of any component of the portfolio editing the `custom.scss` file, which is written in the [Sass](https://sass-lang.com/) language.
+You can change the style of any component of the portfolio editing the `_sass/custom.scss` file, which is written in the [Sass](https://sass-lang.com/) language.
 
 In addition, as mentioned, your portfolio uses [Jekyll](https://jekyllrb.com/) underneath the hood. For more advanced styling of your portfolio, check out [this documentation](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll).
 
@@ -211,7 +211,7 @@ You can comment out a bit of text or an image by using the `{% comment %}` comma
 
 ### Changing the text width
 
-Change any styling by editing the `custom.scss` file, a Sass file, which is a superset of CSS.
+Change any styling by editing the `_sass/custom.scss` file, a Sass file, which is a superset of CSS.
 
 For example, change the text width by changing the `max-width` of `.container`:
 

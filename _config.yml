@@ -17,7 +17,7 @@ baseurl                  : "" # Set this to your repo name
 
 # Theme and Style
 theme: jekyll-theme-minimal
-color_scheme: light # light/default, dark, or aqua
+color_scheme: light # light/default, dark, aqua, or desert
 
 sass:
   style: compressed
@@ -41,5 +41,4 @@ kramdown:
 plugins:
   - jekyll-feed
   - jekyll-include-cache
-  - jekyll-seo-tag
 
