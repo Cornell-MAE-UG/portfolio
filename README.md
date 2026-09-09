@@ -4,7 +4,7 @@
 
 This is a template for you to start building your professional portfolio. It is also part of your journey at MAE and will be reviewed, as needed, by your instructor and the Undergraduate Program Office.
 
-This is your personal copy of the portfolio template repository. It was created automatically when you accepted the Assignment through the GitHub Classroom link you were provided. Once you are up and running, you can delete this README file or replace it with your own content if you wish. 
+This README lives in the portfolio template and travels into your own copy of it. Step 1 below shows you how to make that copy. Once you are up and running, you can delete this README file or replace it with your own content if you wish.
 
 In the following sections, you will find instructions on how to edit, test, and publish your portfolio.
 
@@ -12,8 +12,8 @@ In the following sections, you will find instructions on how to edit, test, and 
 
 It's important to understand the logic of the workflow to edit and publish your portfolio. The process goes as follows:
 
-1. Once: **Create a working copy** of your portfolio.
-Your portfolio is initially stored on GitHub. You _could_ edit it directly on there, but this is inconvenient, inefficient, and error-prone. 
+1. Once: **Create your own copy of the portfolio repository**, then open a working copy of it that you can edit.
+Your portfolio is stored on GitHub. You _could_ edit it directly on there, but this is inconvenient, inefficient, and error-prone. 
 > In a realistic work setting, you would never edit code directly on a server.
 2. On you working copy, you **edit any relevant files**, add images, new project pages, text, etc. 
 Remember to [commit](https://docs.github.com/en/get-started/using-git/about-git#basic-git-commands) often to save your progress. 
@@ -26,7 +26,21 @@ We will go through each of these steps in the following sections.
 
 ---
 
-## Step 1: Creating a Working Copy
+## Step 1: Creating Your Portfolio Repository and a Working Copy
+
+### Create Your Own Repository from the Template
+
+Your portfolio starts as your own copy of this template repository, stored in your personal GitHub account.
+
+1. Go to the [template repository](https://github.com/Cornell-MAE-UG/portfolio) on GitHub.
+2. Click the green **Use this template** button, then **Create a new repository**.
+3. Under "Owner", choose your own GitHub account.
+4. Give the repository a name. Something like `portfolio` is a good choice, since this name becomes part of your published web address.
+5. Click **Create repository**.
+
+You now have your own repository. It is a full, independent copy: nothing you do to it affects the template, and nothing done to the template changes yours. Everything from here on happens in *your* repository, not in the template.
+
+### Open a Working Copy
 
 You will set up your local copy on an online [Codespaces](https://github.com/features/codespaces) environment for development. You create a Codespace through the "Code" button as shown in the image below. This starts an online server with a development environment that enables you to edit, test, commit, and push your work.
 
@@ -66,6 +80,7 @@ Change any references to `Your Name` or `<Your Name>` to your actual name in the
 ### Projects
 - In the `_projects` folder: Use the provided example pages (e.g., `2022-trig-analysis.md`) to build one page per project.
 - Each project has a main (square) project image, set in the page's top matter by the `image` variable in the preamble on the top of the page (the part between the `---` lines).
+- Next to it, set the `imagealt` variable to a short description of what that image shows, for example `imagealt: Shaded CAD rendering of a 1940s tabletop radio`. This is what a screen reader reads aloud, and what search engines read, instead of the picture itself. The example project pages show you the format.
 - All portfolio images are in `assets/images`. Delete the ones you don't need. (The screenshots used by this README live separately, in `assets/readme`.)
 - It is useful to name the page with a leading date. This will determine the order of projects on your main portfolio gallery. You can also develop another ordering by naming the projects with some numerical prefix.
 - The example project pages show you how to include code and images in the portfolio page.
@@ -75,6 +90,8 @@ Change any references to `Your Name` or `<Your Name>` to your actual name in the
 ### CV
 - Replace the placeholder `assets/CV.pdf` with your own PDF CV.
 - You can either edit or delete the placeholder CV markdown text. This is up to you
+
+> ⚠️ Your CV becomes a public file on the web, so take out your home address and phone number before you commit it. Replacing the file later does not undo this: every version you have ever committed stays in your repository's history, where anyone can still read it.
 
 ### Color Schemes
 
@@ -99,6 +116,8 @@ After making changes, remember to commit them often to save your progress. In th
 git add .
 git commit -m "<Commit Message>"
 ```
+
+> ⚠️ `git add .` stages **every** file in the folder, not only the ones you meant to edit, and anything you commit becomes public and permanent. Keep graded feedback, drafts, and anything else you do not want on the web in the `private/` folder: nothing in there is ever committed or published.
 
 Write a meaningful commit message that describes the changes you made.
 On VS Code or Codespaces, you can also use the Git interface inside the development environment to stage (add) and commit your changes. The Git interface usually shows up as a small branch icon on the left sidebar. You can learn how to use it [here](https://code.visualstudio.com/docs/editor/versioncontrol).
@@ -150,6 +169,8 @@ git commit -m "<Commit Edit>"
 git push origin main
 ```
 
+> Remember that `git add .` stages everything in the folder. Anything private belongs in `private/`.
+
 In VS Code or Codespaces, you can use the Git interface inside the development environment to stage (add), commit, and push your changes.
 
 ### Set Up GitHub Pages
@@ -167,7 +188,7 @@ Finally, for publishing your portfolio, follow these steps:
 ### Your Published Portfolio Site
 After a few minutes, your portfolio will be live. **Its address is shown at the top of that same Pages settings tab** — that is always the correct one.
 
-Your address depends on who owns the repository. If you later transfer this repository to your personal GitHub account, the old address stops working, and the Pages tab will show you the new one. So if you have already put your portfolio link on a résumé or a profile somewhere, remember to update it.
+Your address is built from your GitHub username and the repository's name. If you ever rename the repository, or move it to a different account, the old address stops working and the Pages tab will show you the new one. So if you have already put your portfolio link on a résumé or a profile somewhere, remember to update it.
 
 :tada:
 
@@ -176,6 +197,32 @@ Your address depends on who owns the repository. If you later transfer this repo
 ### More Control over Publishing
 
 If you add plugins and add-ons, you might need to publish using your own Gemfile, and other custom actions. See the following link to learn everything about [publishing a Jekyll site with Github Pages](https://jekyllrb.com/docs/continuous-integration/github-actions/).
+
+### Taking Your Portfolio Offline
+
+If you ever want to unpublish your site, go to Settings, then the "Pages" tab, and use the **Unpublish site** option. That removes the public website only; your repository and everything in it stay exactly where they are, and you can publish again later by setting the branch as above.
+
+---
+
+## If Something Goes Wrong
+
+**My site's address gives a 404, or says "There isn't a GitHub Pages site here".**
+Pages was never turned on. Go to your repository's Settings (the repository's own Settings tab, not your account settings), then "Pages", set Source to "Deploy from a branch", Branch to `main` and the folder to `/ (root)`, and save.
+
+**I pushed my changes but the website never updated.**
+First give it a few minutes and hard-refresh your browser (Cmd-Shift-R or Ctrl-Shift-R). If it is still stale, the build **failed**: GitHub leaves the old version up and does not say anything on the site itself. Go to your repository's **Actions** tab, look for a red ✗ next to "pages build and deployment", and click it to read the error.
+
+**I edited `_sass/custom.scss` and now the site will not update at all.**
+An error in that file stops the whole build, so nothing publishes. Look for a missing `}` or `;`, or a `$variable` spelled differently from where it was defined. To get back to a working site, undo your last change to that file, commit, and push.
+
+**I renamed my repository and now the site looks like plain text with no pictures.**
+Your web address changed with the name, and the published site catches up on the next build. Push any commit (or make a small edit on GitHub) to trigger one. The current address is always the one shown in Settings → Pages.
+
+**I came back to my Codespace and my changes are gone.**
+Codespaces shut down when idle and are deleted after a period of inactivity, taking anything you never committed with them. Commit often, and push before you stop working for the week.
+
+**The address the server prints, `http://127.0.0.1:4000/`, will not open.**
+`127.0.0.1` means "this computer", and the Codespace is not your computer. Click the link *in the Codespace terminal* and it will be forwarded to you, or open the "Ports" tab at the bottom and use the entry for port 4000. Copying that address into your own browser will never work.
 
 ---
 
@@ -204,6 +251,8 @@ You can comment out a bit of text or an image by using the `{% comment %}` comma
     Stuff you want to comment out.
 {% endcomment %}
 ```
+
+> This hides the text from the published page only. It is still in the file, in your public repository, and in that repository's history. An HTML comment (`<!-- ... -->`) hides even less: it is sent to the browser, and anyone can read it with View Source.
 
 ### Changing the text width
 
