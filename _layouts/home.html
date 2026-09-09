@@ -25,10 +25,14 @@ layout: default
     {%- comment -%}
       Three projects, newest first. Any project with `featured: true` in its front
       matter comes first; the newest of the rest fill the remaining places.
+
+      The two tests below are opposites of one another on purpose, so that no
+      project can land in both lists and be shown twice. `where_exp` takes one
+      comparison and no `and`/`or`, which is why this is two filters.
     {%- endcomment -%}
     {% assign newest = site.projects | reverse %}
-    {% assign featured = newest | where_exp: "p", "p.featured" %}
-    {% assign rest = newest | where_exp: "p", "p.featured == nil or p.featured == false" %}
+    {% assign featured = newest | where_exp: "p", "p.featured == true" %}
+    {% assign rest = newest | where_exp: "p", "p.featured != true" %}
     {% assign selected = featured | concat: rest | slice: 0, 3 %}
     {% for project in selected %}
       {% include project-card.html project=project heading="h3" %}
