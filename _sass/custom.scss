@@ -34,7 +34,13 @@ $menu-icon: '%231a1a19';
 // is what keeps the gaps looking deliberate rather than picked one at a time.
 $s-1: .5rem;  $s-2: .75rem;  $s-3: 1rem;  $s-4: 1.5rem;  $s-5: 2.5rem;  $s-6: 4rem;
 
-$font-body: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+// The two typefaces come from Google Fonts, loaded in _layouts/default.html. If
+// one of them does not arrive, the browser uses the next name in the list, so
+// the page keeps its shape either way.
+//
+// $font-head is only for the big things: your name, and the title of a page or
+// a project. Everything else, smaller headings included, is $font-body.
+$font-body: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 $font-head: 'Merriweather', Georgia, 'Times New Roman', serif;
 $font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
@@ -60,17 +66,32 @@ body {
   padding: 0;
 }
 
+// Headings below the title are set in the body typeface, slightly bolder and a
+// little tighter than ordinary text.
 h1, h2, h3, h4, h5, h6 {
-  font-family: $font-head;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -.015em;
+  font-family: $font-body;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -.02em;
   text-wrap: balance;
 }
 
-h1 { font-size: 2rem;      margin: 0 0 $s-4; }
-h2 { font-size: 1.5rem;    margin: $s-5 0 $s-2; }
-h3 { font-size: 1.1875rem; margin: $s-4 0 $s-1; }
+// The title of a page is the one place the serif is used. Two things keep it
+// from looking heavy: it is set at 500 rather than bold — raise it to 700 here
+// if you want your name to shout — and `font-optical-sizing` lets the typeface
+// switch to the finer shapes it keeps for large sizes.
+h1 {
+  font-family: $font-head;
+  font-weight: 500;
+  font-optical-sizing: auto;
+  font-size: 2.375rem;
+  line-height: 1.15;
+  letter-spacing: -.02em;
+  margin: 0 0 $s-4;
+}
+
+h2 { font-size: 1.375rem;  margin: $s-5 0 $s-2; }
+h3 { font-size: 1.125rem;  margin: $s-4 0 $s-1; }
 
 p { margin: 0 0 $s-3; }
 
@@ -157,8 +178,9 @@ header {
 
 .navbar-brand {
   font-family: $font-head;
-  font-weight: 700;
-  font-size: 1rem;
+  font-weight: 600;
+  font-size: 1.0625rem;
+  letter-spacing: -.01em;
   color: $ink;
 
   &:hover, &:focus { color: $ink; }
@@ -212,7 +234,7 @@ main {
 .hero-text { max-width: 34ch; }
 
 .hero h1 {
-  font-size: clamp(2rem, 6vw, 2.75rem);
+  font-size: clamp(2.5rem, 7vw, 3.5rem);
   margin: 0;
 }
 
@@ -279,10 +301,8 @@ main {
 }
 
 .project-card .card-title {
-  font-family: $font-body;
   font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: -.005em;
+  letter-spacing: -.01em;
   margin: $s-2 0 0;
 }
 
@@ -329,7 +349,6 @@ main {
 // competing with the name at the top of the page.
 .home-work h2,
 .home-about h2 {
-  font-family: $font-body;
   font-size: .75rem;
   font-weight: 600;
   letter-spacing: .13em;

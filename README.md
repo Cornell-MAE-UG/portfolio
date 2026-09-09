@@ -140,7 +140,7 @@ Once everything looks good, commit anything outstanding and push:
 ```bash
 git add .
 git commit -m "<Commit Message>"
-git push origin main
+git push 
 ```
 
 > Remember that `git add .` stages everything in the folder. Anything private belongs in `private/`.
