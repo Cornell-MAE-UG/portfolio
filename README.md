@@ -1,28 +1,21 @@
-> ⚠️ This README was copied into your repository, so it does not update when the template does. If something here does not match what you see, check the [original README](https://github.com/Cornell-MAE-UG/portfolio/blob/main/README.md) for the current instructions.
-
 # Portfolio Instructions
 
 This is a template for you to start building your professional portfolio. It is also part of your journey at MAE and will be reviewed, as needed, by your instructor and the Undergraduate Program Office.
 
-This README lives in the portfolio template and travels into your own copy of it. Step 1 below shows you how to make that copy. Once you are up and running, you can delete this README file or replace it with your own content.
+This README travels into your own copy of the template. Step 1 below shows you how to make that copy, and the steps after it show you how to edit, test, and publish your portfolio. Once you are up and running, you can delete this README file or replace it with your own content.
 
-The sections that follow show you how to edit, test, and publish your portfolio.
+> ⚠️ Because this README was copied into your repository, it does not update when the template does. If something here does not match what you see, check the [original README](https://github.com/Cornell-MAE-UG/portfolio/blob/main/README.md) for the current instructions.
 
 ## Portfolio Editing Workflow
 
 Before the details, here is the shape of the whole process:
 
-1. Once: **create your own copy of the portfolio repository**, then open a working copy of it that you can edit.
-   Your portfolio is stored on GitHub. You _could_ edit it there directly, but that is slow and error-prone.
-   > In a real work setting, you would never edit code directly on a server.
-2. In your working copy, **edit the files**: add text, images, and new project pages.
-   Remember to [commit](https://docs.github.com/en/get-started/using-git/about-git#basic-git-commands) often to save your progress.
-3. **Run a local test webserver** to check that your changes look the way you planned.
-4. When you are happy with them, commit everything and **push your changes to GitHub**. Then publish your portfolio through GitHub Pages.
-   > Once your portfolio is live, every push publishes your updated portfolio to the web, usually within a few minutes. Two distinctions matter throughout: which of your edits are still only in your working copy and which have been pushed to GitHub and are therefore public; and whether you are looking at your local test server or at the live site on GitHub Pages.
-5. Repeat from Step 2.
+1. **Once:** create your own copy of the portfolio repository, and open a working copy of it that you can edit (Step 1).
+2. **Edit** the files in your working copy — text, images, new project pages — and [commit](https://docs.github.com/en/get-started/using-git/about-git#basic-git-commands) often to save your progress (Step 2).
+3. **Test** your changes on a local web server, which only you can see (Step 3).
+4. **Publish** by pushing your commits to GitHub, which updates your live site within a few minutes (Step 4).
 
-The following sections walk through each step.
+Then repeat from 2. Your portfolio is stored on GitHub and you _could_ edit it there directly, but that skips the testing step — and in a real work setting you would never edit code directly on a server.
 
 ---
 
@@ -145,7 +138,7 @@ Then start the server:
 bundle exec jekyll serve
 ```
 
-Leave it running while you work. Most edits are picked up automatically — save the file and reload the page. Changes to `_config.yml` are the exception: stop the server with `Ctrl-C` and start it again for those.
+Leave it running while you work. Most edits are picked up automatically — save the file and reload the page. Changes to `_config.yml` are the exception: click into the terminal, hold the Control key and press C to stop the server, then run the same command again. This is what "press ctrl-c" means anywhere in the terminal, and it is typed, not clicked.
 
 The server prints the address of your site:
 ```text
