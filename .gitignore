@@ -34,7 +34,9 @@ Gemfile.lock
 .vscode/
 
 # Your private files. Anything in here is never committed and never published.
-private/
+# (.gitkeep is tracked only so the folder itself ships in your copy.)
+private/*
+!private/.gitkeep
 
 # Claude Code files
 CLAUDE.md

@@ -27,7 +27,8 @@ Then repeat from 2. You _could_ edit your files on GitHub directly, but that ski
 
 3. Under "Owner", choose your own GitHub account.
 4. Give the repository a name. Something like `portfolio` is a good choice, since the name becomes part of your published web address.
-5. Click **Create repository**.
+5. Leave the repository set to **Public**. On a free GitHub account, only public repositories can be published as a website, so a private one cannot go live in Step 4.
+6. Click **Create repository**.
 
 You now have your own repository — a full, independent copy. Nothing you do to it affects the template, and nothing done to the template changes yours. Everything from here on happens in *your* repository.
 
@@ -174,7 +175,7 @@ To take your site off the web, go to Settings → Pages and use **Unpublish site
 ## If Something Goes Wrong
 
 **My site's address gives a 404, or says "There isn't a GitHub Pages site here".**
-Pages was never turned on. Go to your repository's Settings (not your account settings) → Pages, set Source to "Deploy from a branch", Branch to `main` and the folder to `/ (root)`, and save.
+Pages was never turned on. Go to your repository's Settings (not your account settings) → Pages, set Source to "Deploy from a branch", Branch to `main` and the folder to `/ (root)`, and save. If there is no branch to choose, or the option is missing, check that your repository is **Public** — on a free account only public repositories can be published.
 
 **I pushed my changes but the website never updated.**
 Give it a few minutes and hard-refresh your browser (Cmd-Shift-R or Ctrl-Shift-R). If it is still stale, the build **failed** — GitHub leaves the old version up and says nothing on the site itself. Open your repository's **Actions** tab, look for a red ✗ next to "pages build and deployment", and click it to read the error.
@@ -187,6 +188,9 @@ Your web address changed with the name, and the published site catches up on its
 
 **I came back to my Codespace and my changes are gone.**
 Codespaces shut down when idle and are deleted after longer inactivity, taking anything you never committed with them. Commit often, and push before you stop working for the week.
+
+**I cannot create a Codespace — it says I have used up my included hours.**
+Codespaces are free up to a monthly limit on your personal account, and that limit resets each month. Delete any codespaces you are no longer using from [github.com/codespaces](https://github.com/codespaces), and stop yours when you finish working rather than leaving it running. You can also raise the limit, for free, by activating the [GitHub Student Developer Pack](https://education.github.com/pack) — worth doing regardless. If you are stuck in the meantime, you can work on your own laptop instead: see "For Advanced Users" in Step 1.
 
 **The address the server prints, `http://127.0.0.1:4000/`, will not open.**
 `127.0.0.1` means "this computer", and the Codespace is not your computer, so copying that address into your own browser will never work. Click the link *in the Codespace terminal*, or open the "Ports" tab at the bottom and use the entry for port 4000.
