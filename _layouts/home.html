@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<!-- The heading, the one-line introduction and the portrait are all taken from
+     _config.yml and from assets/images/profile-pic.jpg, so there is nothing to
+     edit in this file. Write your About Me text in index.md. -->
+<div class="hero">
+  <div class="hero-text">
+    <h1>{{ site.name }}</h1>
+    <p class="lede">{{ site.description }}</p>
+    <p class="hero-links">
+      <a href="{{ "/projects/" | relative_url }}">See my work</a>
+      <a href="{{ "/cv/" | relative_url }}">Read my CV</a>
+    </p>
+  </div>
+  <img class="hero-portrait" src="{{ "/assets/images/profile-pic.jpg" | relative_url }}"
+       alt="Portrait of {{ site.name }}">
+</div>
+
+{{ content }}
