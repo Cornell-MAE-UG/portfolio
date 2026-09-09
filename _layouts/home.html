@@ -27,9 +27,7 @@ layout: default
       {% include project-card.html project=project heading="h3" %}
     {% endfor %}
   </div>
-  {% if site.projects.size > 3 %}
-    <p class="more-link"><a href="{{ "/projects/" | relative_url }}">See all projects</a></p>
-  {% endif %}
+  <p class="more-link"><a href="{{ "/projects/" | relative_url }}">See all projects</a></p>
 </section>
 {% endif %}
 

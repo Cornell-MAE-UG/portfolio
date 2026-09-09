@@ -252,9 +252,12 @@ main {
   transform: translateX(-50%);
 }
 
+// Three across, and three across whatever the number of projects is. An
+// automatic column count would stretch a single project to the full width of
+// the page, which is what a student with one project finished would see.
 .project-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: $s-5 $s-4;
 }
 
@@ -425,7 +428,15 @@ main {
 //  Small screens, printing, and reduced motion
 // ---------------------------------------------------------------------------
 
+// Two across on a tablet, one on a phone. The cards keep their shape at every
+// width because the number of columns changes, not the number of projects.
+@media (max-width: 900px) {
+  .project-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 @media (max-width: 576px) {
+  .project-gallery { grid-template-columns: minmax(0, 1fr); }
+
   .hero {
     flex-direction: column-reverse;
     align-items: flex-start;
