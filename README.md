@@ -121,7 +121,7 @@ bundle install
 ### Running the Local Portfolio Server
 Then, to run the server you run the `jekyll serve` command:
 ```bash
-bundle exec jekyll serve --baseurl=""
+bundle exec jekyll serve
 ```
 
 Note that many updates to your code are automatically reloaded into the web server. However, some changes, notably to `_config.yml` require a restart of the jekyll server.
@@ -156,22 +156,18 @@ In VS Code or Codespaces, you can use the Git interface inside the development e
 
 Finally, for publishing your portfolio, follow these steps:
 
-1. In your `_config.yml` file, set the `baseurl` to your portfolio repo name (e.g., `"/sp26-portfolio-hoffman/"`). Commit and push this change to GitHub.
-
-```yaml
-baseurl: "/<your-repo>/"
-```
-
-2. Go to your repository's Settings
+1. Go to your repository's Settings
 <img src="assets/readme/settings.png" width="600" />
 
-3. Choose the "Pages" tab under "Build and Deployment", verify that "Source" says "Deploy from a branch" and under "Branch" choose `main` and `/ (root)`
+2. Choose the "Pages" tab under "Build and Deployment", verify that "Source" says "Deploy from a branch" and under "Branch" choose `main` and `/ (root)`
 <img src="assets/readme/pages-settings.png" width="600" />
 
-4. Don't forget to save this setting at the bottom of the page.
+3. Don't forget to save this setting at the bottom of the page.
 
 ### Your Published Portfolio Site
-After a few minutes, your portfolio should be live at `https://cornell-mae-ug.github.io/<your-repo>/`, where `your-repo` is this repository's name, probably `portfolio-<your-github-username>`. This URL is also shown in your Pages setting tab.
+After a few minutes, your portfolio will be live. **Its address is shown at the top of that same Pages settings tab** — that is always the correct one.
+
+Your address depends on who owns the repository. If you later transfer this repository to your personal GitHub account, the old address stops working, and the Pages tab will show you the new one. So if you have already put your portfolio link on a résumé or a profile somewhere, remember to update it.
 
 :tada:
 
