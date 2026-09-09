@@ -1,145 +1,295 @@
-// Default to light theme
-$primary-color: #3a3f58;
-$background-color: #f7f8fa;
-$text-color: #333;
-$link-color: #3a3f58;
+// ---------------------------------------------------------------------------
+//  Colour schemes
+//
+//  Pick one with `color_scheme:` in _config.yml. Each scheme sets the same six
+//  colours, and every rule further down is built from those six — so changing a
+//  colour here changes it everywhere it is used.
+// ---------------------------------------------------------------------------
 
-// Set theme colors based on the color_scheme variable
+// light — the default
+$bg:      #fbfaf9;   // the page itself
+$surface: #ffffff;   // anything sitting on top of the page
+$ink:     #1a1a19;   // body text and headings
+$muted:   #6b6963;   // quieter text: dates, tools, captions
+$line:    #e3e0da;   // hairlines, under the header and between projects
+$accent:  #9d1c20;   // the one highlight colour: links, and the page you are on
+
+// The hamburger menu button is drawn as a picture, so its colour has to be
+// written out separately. %23 is how a "#" is written inside a picture address.
+$menu-icon: '%231a1a19';
+
 @if $color_scheme == 'dark' {
-  $primary-color: #333;
-  $background-color: #000;
-  $text-color: #fff;
-  $link-color: #8ab4f8; // links stay light so they are readable on black
+  $bg: #14161a;  $surface: #1b1e24;  $ink: #e8e9ec;
+  $muted: #9aa0ab;  $line: #2b2f37;  $accent: #e78a8c;
+  $menu-icon: '%23e8e9ec';
 } @else if $color_scheme == 'aqua' {
-  $primary-color: #3f6472;
-  $background-color: #eff6e0;
-  $text-color: #01161e;
-  $link-color: #3f6472;
+  $bg: #f2f6f5;  $surface: #ffffff;  $ink: #10201f;
+  $muted: #586b69;  $line: #d8e3e0;  $accent: #2f6f6a;
 } @else if $color_scheme == 'desert' {
-  $primary-color: #7a4444;
-  $background-color: #f6f1e0;
-  $text-color: #1e0101;
-  $link-color: #7a4444;
+  $bg: #faf6ef;  $surface: #ffffff;  $ink: #22190f;
+  $muted: #736354;  $line: #e8ded0;  $accent: #8a4b2a;
 }
 
-// Bootstrap's .navbar-dark colours nav links at 55% white, which is too faint
-// to read on the lighter schemes. 85% still marks the active page as brighter.
-.navbar-dark {
-  --bs-navbar-color: rgba(255, 255, 255, 0.85);
-  --bs-navbar-hover-color: #fff;
-  --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.5);
+// Spacing. Everything on the page is spaced with one of these six values, which
+// is what keeps the gaps looking deliberate rather than picked one at a time.
+$s-1: .5rem;  $s-2: .75rem;  $s-3: 1rem;  $s-4: 1.5rem;  $s-5: 2.5rem;  $s-6: 4rem;
+
+$font-body: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-head: 'Merriweather', Georgia, 'Times New Roman', serif;
+$font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+// The width of the reading column. Widen it here if you want longer lines.
+$measure: 40rem;
+// The width of the picture galleries, which are allowed to be wider.
+$wide: 1080px;
+
+// ---------------------------------------------------------------------------
+//  Page basics
+// ---------------------------------------------------------------------------
+
+body {
+  font-family: $font-body;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  background-color: $bg;
+  color: $ink;
+  margin: 0;
+  padding: 0;
 }
 
-// The menu button's icon comes from Bootstrap at the same faint 55% white.
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-head;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -.015em;
+  text-wrap: balance;
 }
 
-// Links inside the page body, which Bootstrap would otherwise leave bright blue.
-main a {
-  color: $link-color;
+h1 { font-size: 2rem;      margin: 0 0 $s-4; }
+h2 { font-size: 1.5rem;    margin: $s-5 0 $s-2; }
+h3 { font-size: 1.1875rem; margin: $s-4 0 $s-1; }
+
+p { margin: 0 0 $s-3; }
+
+main a { color: $accent; }
+
+// A one-line introduction, larger and quieter than body text.
+.lede {
+  font-size: 1.1875rem;
+  color: $muted;
+  line-height: 1.5;
 }
 
-// Bootstrap sets no max-width on images — only its opt-in .img-fluid class does,
-// and nothing here uses it. Without this, a plain ![](my-photo.jpg) in a project
-// page runs off the side of the page at whatever width the camera produced.
+// Dates and tool names. Small, spaced out, and in the typewriter font, which is
+// the one place this design borrows from an engineering drawing.
+.card-meta {
+  font-family: $font-mono;
+  font-size: .6875rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: $muted;
+  margin: 0;
+}
+
+// Bootstrap puts no limit on the width of a picture, so a photo straight from a
+// phone runs off the side of the page. This stops that, everywhere.
 main img {
   max-width: 100%;
   height: auto;
 }
 
-
-.navbar, h1, h2, h3, h4, h5, h6 {
-  font-family: 'Merriweather', serif;
-  font-weight: 700;
-}
-
-h1 {
-  margin-bottom: 25px;
-}
-
-body {
-  font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
-  line-height: 1.6;
-  background-color: $background-color;
-  color: $text-color;
-  margin: 0;
-  padding: 0;
-}
-
-header, footer {
-  padding: 10px 5px;
-  background: $primary-color;
-}
+// ---------------------------------------------------------------------------
+//  Header and footer
+// ---------------------------------------------------------------------------
 
 header {
-  margin-bottom: 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  background: $bg;
+  border-bottom: 1px solid $line;
 }
 
-footer {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 0.9em;
+// Header and footer line up with the galleries rather than the reading column.
+.page-inner {
+  width: min(#{$wide}, 92vw);
+  margin-inline: auto;
+  padding-inline: 0;
 }
 
-.container {
-  max-width: 600px;
+.navbar {
+  --bs-navbar-color: #{$muted};
+  --bs-navbar-hover-color: #{$ink};
+  --bs-navbar-active-color: #{$ink};
+  --bs-navbar-toggler-border-color: #{$line};
+  --bs-navbar-toggler-focus-width: .15rem;
+  padding: $s-2 0;
+  font-size: .9375rem;
 }
 
-.project-item img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+.navbar-brand {
+  font-family: $font-head;
+  font-weight: 700;
+  font-size: 1rem;
+  color: $ink;
+
+  &:hover, &:focus { color: $ink; }
 }
 
-.project-item h3 {
-  margin-top: 15px;
-  font-size: 1.25em;
+.navbar-nav { gap: $s-4; }
+
+.nav-link { padding-inline: 0 !important; }
+
+// The page you are on is marked with a line under it, not only a colour.
+.nav-link.active { box-shadow: inset 0 -2px 0 $accent; }
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='#{$menu-icon}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  color: $background-color;
+main {
+  padding-top: $s-5;
+  padding-bottom: $s-6;
+}
+
+.container { max-width: $measure; }
+
+.site-footer {
+  border-top: 1px solid $line;
+  color: $muted;
+  font-size: .875rem;
+  padding: $s-4 0;
+}
+
+// ---------------------------------------------------------------------------
+//  Home page
+// ---------------------------------------------------------------------------
+
+.hero {
+  display: flex;
+  align-items: flex-start;
+  gap: $s-5;
+  margin-bottom: $s-6;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 6vw, 2.75rem);
+  margin: 0;
+}
+
+.hero .lede { margin: $s-3 0 0; }
+
+.hero-links {
+  display: flex;
+  gap: $s-4;
+  margin: $s-4 0 0;
+}
+
+.hero-links a {
+  color: $accent;
   text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s;
+  box-shadow: inset 0 -1px 0 currentColor;
+  padding-bottom: 2px;
 }
 
-.highlight {
-  background-color: #2d2d2d;
-  color: #e0e0e0;
-  padding: 10px 0;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  overflow-x: auto;
+.hero-portrait {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: none;
+  margin-left: auto;
 }
 
-.highlight .k { color: #c792ea; }
-.highlight .nb { color: #82aaff; }
-.highlight .s { color: #c3e88d; }
-.highlight .mi { color: #f78c6c; }
-.highlight .c { color: #9aa2b1; }
-.highlight .p { color: #89ddff; }
-.highlight .o { color: #ff5370; }
+// ---------------------------------------------------------------------------
+//  Projects gallery
+// ---------------------------------------------------------------------------
 
-.profile-image {
-  float: left;
-  margin: 20px 25px 25px 0;
-  width: 150px;
-  vertical-align: top;
+// The gallery is allowed to be wider than the reading column it sits inside.
+.gallery-container {
+  width: min(#{$wide}, 92vw);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.project-image {
-  float: left;
-  margin: 20px 25px 25px 0;
-  max-width: 200px;
-  vertical-align: top;
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: $s-5 $s-4;
 }
 
+.project-card {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+// Whatever shape of picture you upload is cropped to the same shape as the
+// others, so the gallery stays even.
+.project-card img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 4px;
+  background: $surface;
+}
+
+.project-card h2 {
+  font-family: $font-body;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -.005em;
+  margin: $s-2 0 0;
+}
+
+.project-card .card-desc {
+  font-size: .875rem;
+  color: $muted;
+  margin: 2px 0 0;
+  line-height: 1.45;
+}
+
+.project-card .card-meta { margin-top: $s-2; }
+
+.project-card:hover img { opacity: .9; }
+.project-card:hover h2  { color: $accent; }
+
+// ---------------------------------------------------------------------------
+//  A single project page
+// ---------------------------------------------------------------------------
+
+.project > .card-meta { margin-bottom: $s-2; }
+.project h1 { margin-bottom: $s-2; }
+.project .lede { margin-bottom: $s-4; }
+
+.project-hero {
+  width: min(#{$wide}, 92vw);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: $s-5;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: $s-5;
+  color: $muted;
+  text-decoration: none;
+  font-size: .9375rem;
+}
+
+.back-link:hover { color: $accent; }
+
+// Pictures inside the text of a project page.
 .inline-image {
   max-width: 350px;
-  margin: 0px 25px 15px 25px;
+  margin: 0 $s-4 $s-3 $s-4;
+  border-radius: 4px;
   vertical-align: top;
 
   &-l {
@@ -155,78 +305,64 @@ footer {
   }
 }
 
-.profile-image, .project-image {
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+// Code, as in the example project.
+.highlight {
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+  padding: $s-2 0;
+  margin-bottom: $s-3;
+  border-radius: 4px;
+  overflow-x: auto;
 }
 
+.highlight .k  { color: #c792ea; }
+.highlight .nb { color: #82aaff; }
+.highlight .s  { color: #c3e88d; }
+.highlight .mi { color: #f78c6c; }
+.highlight .c  { color: #9aa2b1; }
+.highlight .p  { color: #89ddff; }
+.highlight .o  { color: #ff5370; }
 
-.gallery-container {
-  display: flex;
-  justify-content: center;
-  margin: auto;
+// ---------------------------------------------------------------------------
+//  Small screens, printing, and reduced motion
+// ---------------------------------------------------------------------------
+
+@media (max-width: 576px) {
+  .hero {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: $s-4;
+  }
+
+  .hero-portrait { margin-left: 0; }
+
+  // Text does not wrap well around a picture in a narrow column, so the
+  // pictures inside project pages go full width instead.
+  .inline-image, .inline-image-l, .inline-image-r {
+    float: none;
+    display: block;
+    max-width: 100%;
+    margin: $s-3 0;
+  }
 }
 
-.project-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  margin: 0 auto;
-  max-width: 100%;
+@media print {
+  header, .site-footer, .back-link { display: none; }
+
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 11pt;
+  }
+
+  main { padding: 0; }
+  .container { max-width: none; }
+  a { color: #000; }
 }
 
-.gallery-item {
-  text-align: center;
-  transition: transform 0.3s ease;
-  max-width: 250px; 
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
 }
-
-// aspect-ratio crops whatever shape of image a student uploads into a square
-// card, so gallery rows stay even. (The `height: 85%` this replaces did nothing:
-// a percentage height needs a parent of fixed height, and this parent is auto.)
-.gallery-item img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  display: block;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.gallery-item p {
-  margin: 13px 0;
-  font-size: .9rem;
-  color: $text-color;
-}
-
-.gallery-item a {
-  text-decoration: none;
-}
-
-.gallery-item:hover {
-  transform: scale(1.05); 
-}
-
-.project-image {
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.back-arrow {
-  display: inline-block;
-  font-size: 1.1em;
-  color: $text-color;
-  text-decoration: none;
-  margin-bottom: 1em;
-  font-weight: bold;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.back-arrow:hover {
-  text-decoration: underline;
-  transform: translateX(-4px);
-}
-
-
