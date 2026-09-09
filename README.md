@@ -64,6 +64,7 @@ Change `title` and `name` in `_config.yml` to your actual name. Your name is tak
 - Each project has a main image, set by the `image` variable in the front matter: the block at the top of the page between the `---` lines. Any shape of picture works — it is cropped to match the others.
 - Right next to it, set `imagealt` to a short description of what the image shows, for example `imagealt: Shaded CAD rendering of a 1940s tabletop radio`. A screen reader reads this aloud, and search engines read it, in place of the picture itself.
 - The filename sets the order of projects in your gallery, so start it with the date, as the examples do.
+- Your home page shows your three most recent projects. To pick one yourself, add `featured: true` to its front matter: featured projects come first, and the newest of the rest fill the places left over.
 - Portfolio images live in `assets/images`; delete the ones you don't need. (This README's screenshots live separately, in `assets/readme`.)
 - Delete the example project pages once you have your own.
 - Photograph your work against a plain background, in landscape, one thing per picture. Consistent images are most of what makes a portfolio look finished.

@@ -3,6 +3,7 @@ layout: project
 title: Analysis of Functions
 description: Class project with Graphs
 technologies: [MATLAB, python]
+# featured: true   # delete the # to always show this project on your home page
 image: /assets/images/function-graph.png
 imagealt: Line plot titled "Analysis of Standard Functions" showing sin(x), cos(x) and 0.1*tan(x) for x from 0 to 10
 ---

@@ -3,6 +3,7 @@ layout: project
 title: Radio CAD Rendering
 description: Advanced CAD Project
 technologies: [Autodesk Fusion]
+# featured: true   # delete the # to always show this project on your home page
 image: /assets/images/radio-machine-cad.jpg
 imagealt: Line-art CAD drawing of a vintage tabletop radio, with four vacuum tubes and a tuning coil mounted above the dial and speaker grilles
 ---

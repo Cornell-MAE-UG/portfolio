@@ -3,6 +3,7 @@ layout: project
 title: Spaceship Design
 description: Just a spaceship that I designed
 technologies: [SolidWorks, Machining]
+# featured: true   # delete the # to always show this project on your home page
 image: /assets/images/spaceship-design.jpg
 imagealt: Illustration of a boxy, faceted spacecraft with glowing blue thrusters and portholes, drifting past two moons
 ---
