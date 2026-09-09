@@ -42,6 +42,9 @@ $font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 $measure: 40rem;
 // The width of the picture galleries, which are allowed to be wider.
 $wide: 1080px;
+// The CV is scanned rather than read straight through, so it sits between the
+// two: wider than the reading column, narrower than a gallery.
+$measure-cv: 48rem;
 
 // ---------------------------------------------------------------------------
 //  Page basics
@@ -90,6 +93,31 @@ main a { color: $accent; }
   color: $muted;
   margin: 0;
 }
+
+// The --- lines between sections of a CV.
+main hr {
+  border: 0;
+  border-top: 1px solid $line;
+  margin: $s-5 0;
+}
+
+// Tables have no styling of their own in Bootstrap unless a class is added, and
+// a wide one would otherwise run off the side of the page.
+main table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .9375rem;
+  margin-bottom: $s-4;
+}
+
+main th, main td {
+  text-align: left;
+  padding: $s-1 $s-2 $s-1 0;
+  border-bottom: 1px solid $line;
+  overflow-wrap: anywhere;
+}
+
+main th { font-weight: 600; }
 
 // Bootstrap puts no limit on the width of a picture, so a photo straight from a
 // phone runs off the side of the page. This stops that, everywhere.
@@ -165,12 +193,23 @@ main {
 //  Home page
 // ---------------------------------------------------------------------------
 
+// The home page opens at the same width as the work below it, so the name, the
+// first project and the portrait all line up on the same two edges. Only the
+// About Me text below stays in the narrower reading column.
 .hero {
+  width: min(#{$wide}, 92vw);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: flex-start;
   gap: $s-5;
-  margin-bottom: $s-6;
+  margin-bottom: $s-5;
 }
+
+// However wide the window is, the one-line introduction stays short enough to
+// take in at a glance.
+.hero-text { max-width: 34ch; }
 
 .hero h1 {
   font-size: clamp(2rem, 6vw, 2.75rem);
@@ -193,8 +232,8 @@ main {
 }
 
 .hero-portrait {
-  width: 128px;
-  height: 128px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
   flex: none;
@@ -236,7 +275,7 @@ main {
   background: $surface;
 }
 
-.project-card h2 {
+.project-card .card-title {
   font-family: $font-body;
   font-size: 1rem;
   font-weight: 600;
@@ -254,7 +293,55 @@ main {
 .project-card .card-meta { margin-top: $s-2; }
 
 .project-card:hover img { opacity: .9; }
-.project-card:hover h2  { color: $accent; }
+.project-card:hover .card-title { color: $accent; }
+
+// The three most recent projects, shown on the home page under a hairline. The
+// cards are exactly the size they are on the Projects page, because both pages
+// build them from _includes/project-card.html.
+.home-work {
+  width: min(#{$wide}, 92vw);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top: 1px solid $line;
+  padding-top: $s-5;
+  margin-bottom: $s-5;
+}
+
+// The About Me text, and anything else written in index.md, sits under the same
+// hairline and starts at the same left edge as the work above it. Only the text
+// itself is held to the narrower reading column.
+.home-about {
+  width: min(#{$wide}, 92vw);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top: 1px solid $line;
+  padding-top: $s-5;
+}
+
+.home-about > * { max-width: $measure; }
+
+// On the home page a heading is a label for the section under it, not a title
+// competing with the name at the top of the page.
+.home-work h2,
+.home-about h2 {
+  font-family: $font-body;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: $muted;
+  margin: $s-5 0 $s-3;
+}
+
+.home-work > h2:first-child,
+.home-about > h2:first-child { margin-top: 0; }
+
+.more-link {
+  margin-top: $s-4;
+  font-size: .9375rem;
+}
 
 // ---------------------------------------------------------------------------
 //  A single project page
@@ -324,6 +411,17 @@ main {
 .highlight .o  { color: #ff5370; }
 
 // ---------------------------------------------------------------------------
+//  CV page
+// ---------------------------------------------------------------------------
+
+.cv {
+  width: min(#{$measure-cv}, 92vw);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// ---------------------------------------------------------------------------
 //  Small screens, printing, and reduced motion
 // ---------------------------------------------------------------------------
 
@@ -357,6 +455,13 @@ main {
 
   main { padding: 0; }
   .container { max-width: none; }
+
+  .cv {
+    width: auto;
+    position: static;
+    left: auto;
+    transform: none;
+  }
   a { color: #000; }
 }
 
