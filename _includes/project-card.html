@@ -1,0 +1,19 @@
+{%- comment -%}
+One card in a projects grid. Used by the gallery page and the home page.
+  project — the project to show
+  heading — the heading level for the title, "h2" (default) or "h3"
+The year is taken from the start of the filename, so 2024-robot-arm.md shows 2024.
+{%- endcomment -%}
+{%- assign p = include.project -%}
+{%- assign hl = include.heading | default: 'h2' -%}
+{%- assign year = p.path | split: "/" | last | slice: 0, 4 -%}
+{%- assign yearnum = year | plus: 0 -%}
+<a class="project-card" href="{{ p.url | relative_url }}">
+  <img src="{{ p.image | relative_url }}" alt="" loading="lazy">
+  <{{ hl }} class="card-title">{{ p.title }}</{{ hl }}>
+  {%- if p.description %}<p class="card-desc">{{ p.description }}</p>{% endif -%}
+  <p class="card-meta">
+    {%- if yearnum > 1900 %}{{ year }}{% endif -%}
+    {%- if p.technologies %}{% if yearnum > 1900 %} &middot; {% endif %}{{ p.technologies | join: ", " }}{% endif -%}
+  </p>
+</a>

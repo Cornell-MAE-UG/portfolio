@@ -18,4 +18,19 @@ layout: default
        alt="Portrait of {{ site.name }}">
 </div>
 
+{% if site.projects.size > 0 %}
+<section class="home-work">
+  <h2>Selected work</h2>
+  <div class="project-gallery">
+    {% assign newest = site.projects | reverse %}
+    {% for project in newest limit: 3 %}
+      {% include project-card.html project=project heading="h3" %}
+    {% endfor %}
+  </div>
+  {% if site.projects.size > 3 %}
+    <p class="more-link"><a href="{{ "/projects/" | relative_url }}">See all projects</a></p>
+  {% endif %}
+</section>
+{% endif %}
+
 {{ content }}

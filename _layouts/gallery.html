@@ -4,22 +4,12 @@ layout: default
 
 {{ content }}
 
-<!-- One card per file in the _projects folder. The year comes from the start of
-     the filename, so a file named 2024-robot-arm.md is shown as 2024. -->
+<!-- One card per file in the _projects folder, newest first. -->
 <div class="gallery-container">
   <div class="project-gallery">
-    {% for project in site.projects %}
-      {% assign year = project.path | split: "/" | last | slice: 0, 4 %}
-      {% assign yearnum = year | plus: 0 %}
-      <a class="project-card" href="{{ project.url | relative_url }}">
-        <img src="{{ project.image | relative_url }}" alt="" loading="lazy">
-        <h2>{{ project.title }}</h2>
-        {% if project.description %}<p class="card-desc">{{ project.description }}</p>{% endif %}
-        <p class="card-meta">
-          {%- if yearnum > 1900 %}{{ year }}{% endif -%}
-          {%- if project.technologies %}{% if yearnum > 1900 %} &middot; {% endif %}{{ project.technologies | join: ", " }}{% endif -%}
-        </p>
-      </a>
+    {% assign newest = site.projects | reverse %}
+    {% for project in newest %}
+      {% include project-card.html project=project %}
     {% endfor %}
   </div>
 </div>
