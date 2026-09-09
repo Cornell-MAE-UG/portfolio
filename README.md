@@ -48,7 +48,7 @@ You can instead clone the repository to your laptop and work in an editor like [
 
 ## Step 2: Editing the Files to Personalize Your Portfolio
 
-> The `< >` brackets mark placeholders. Delete them along with the text inside; do not keep them around your own text.
+> The `< >` and `[ ]` brackets mark placeholders. Delete them along with the text inside; do not keep them around your own text.
 
 ### Name
 
