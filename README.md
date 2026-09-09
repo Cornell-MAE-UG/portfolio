@@ -52,23 +52,21 @@ You can instead clone the repository to your laptop and work in an editor like [
 
 ### Name
 
-Change every reference to `Your Name` or `<Your Name>` to your actual name, in these files:
-- `_config.yml`
-- `index.md`
-- `_pages/projects.md`
-- `_pages/cv.md`
+Change `title` and `name` in `_config.yml` to your actual name. Your name is taken from there everywhere it appears: the heading on your home page, the menu bar, and the browser tab.
 
 ### Homepage
+- In `_config.yml`, replace `description` with one line about yourself. It appears under your name at the top of your home page.
 - In `index.md`, replace the placeholder text with a short introduction to yourself.
 - Replace `assets/images/profile-pic.jpg` with a portrait of yourself.
 
 ### Projects
 - In the `_projects` folder, make one page per project, using the example pages (such as `2022-trig-analysis.md`) as your starting point. They also show how to include code and images in a page.
-- Each project has a main, square image, set by the `image` variable in the front matter: the block at the top of the page between the `---` lines.
+- Each project has a main image, set by the `image` variable in the front matter: the block at the top of the page between the `---` lines. Any shape of picture works — it is cropped to match the others.
 - Right next to it, set `imagealt` to a short description of what the image shows, for example `imagealt: Shaded CAD rendering of a 1940s tabletop radio`. A screen reader reads this aloud, and search engines read it, in place of the picture itself.
 - The filename sets the order of projects in your gallery, so start it with the date, as the examples do.
 - Portfolio images live in `assets/images`; delete the ones you don't need. (This README's screenshots live separately, in `assets/readme`.)
 - Delete the example project pages once you have your own.
+- Photograph your work against a plain background, in landscape, one thing per picture. Consistent images are most of what makes a portfolio look finished.
 - For other formatting, see the [Jekyll Markdown documentation](https://jekyllrb.com/docs/markdown/).
 
 ### CV

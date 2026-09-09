@@ -2,14 +2,24 @@
 layout: default
 ---
 
-<h1>{{ page.title }}</h1>
+{% assign year = page.path | split: "/" | last | slice: 0, 4 %}
+{% assign yearnum = year | plus: 0 %}
 
-<p><img src="{{ page.image | relative_url }}" alt="{{ page.imagealt }}" class="project-image" /></p>
+<article class="project">
+  <p class="card-meta">
+    {%- if yearnum > 1900 %}{{ year }}{% endif -%}
+    {%- if page.technologies %}{% if yearnum > 1900 %} &middot; {% endif %}{{ page.technologies | join: ", " }}{% endif -%}
+  </p>
 
-{{ content }}
+  <h1>{{ page.title }}</h1>
 
-<p><strong>Technologies Used</strong>: {{ page.technologies | join: ", " }}</p>
+  {% if page.description %}<p class="lede">{{ page.description }}</p>{% endif %}
 
-<a href="{{ "/projects/" | relative_url }}" class="back-arrow">
+  <img class="project-hero" src="{{ page.image | relative_url }}" alt="{{ page.imagealt }}">
+
+  {{ content }}
+
+  <a href="{{ "/projects/" | relative_url }}" class="back-link">
     <i class="bi bi-arrow-left-circle-fill" aria-hidden="true"></i> Back to Projects
-</a>
+  </a>
+</article>
