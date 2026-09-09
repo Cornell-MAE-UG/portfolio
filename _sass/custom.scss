@@ -40,6 +40,14 @@ main a {
   color: $link-color;
 }
 
+// Bootstrap sets no max-width on images — only its opt-in .img-fluid class does,
+// and nothing here uses it. Without this, a plain ![](my-photo.jpg) in a project
+// page runs off the side of the page at whatever width the camera produced.
+main img {
+  max-width: 100%;
+  height: auto;
+}
+
 
 .navbar, h1, h2, h3, h4, h5, h6 {
   font-family: 'Merriweather', serif;
@@ -174,15 +182,17 @@ footer {
   max-width: 250px; 
 }
 
+// aspect-ratio crops whatever shape of image a student uploads into a square
+// card, so gallery rows stay even. (The `height: 85%` this replaces did nothing:
+// a percentage height needs a parent of fixed height, and this parent is auto.)
 .gallery-item img {
   width: 100%;
-  height: 85%;
+  aspect-ratio: 1 / 1;
   display: block;
   object-fit: cover;
   object-position: center;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
 }
 
 .gallery-item p {
