@@ -21,14 +21,15 @@ Then repeat from 2. You _could_ edit your files on GitHub directly, but that ski
 
 ### Create Your Own Repository from the Template
 
-1. Go to the [template repository](https://github.com/Cornell-MAE-UG/portfolio) on GitHub.
-2. Click the green **Use this template** button, then **Create a new repository**.
+1. Go to the [template repository](https://github.com/Cornell-MAE-UG/portfolio) on GitHub
+    > ⚠️ You probably want to open this link in a new window to keep reading this document.
+3. Click the green **Use this template** button, then **Create a new repository**.
 <img src="assets/readme/use-this-template.png" width="600" />
 
-3. Under "Owner", choose your own GitHub account.
-4. Give the repository a name. Something like `portfolio` is a good choice, since the name becomes part of your published web address.
-5. Leave the repository set to **Public**. On a free GitHub account, only public repositories can be published as a website, so a private one cannot go live in Step 4.
-6. Click **Create repository**.
+4. Under "Owner", choose your own GitHub account.
+5. Give the repository a name. Something like `portfolio` is a good choice, since the name becomes part of your published web address.
+6. Leave the repository set to **Public**. On a free GitHub account, only public repositories can be published as a website, so a private one cannot go live in Step 4.
+7. Click **Create repository**.
 
 You now have your own repository — a full, independent copy. Nothing you do to it affects the template, and nothing done to the template changes yours. Everything from here on happens in *your* repository.
 
