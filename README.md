@@ -4,11 +4,7 @@ This template is the start of your professional portfolio. It is also part of yo
 
 You only need to set it up once, and then your work is a loop: **Edit** your files &rarr; **Preview** the portfolio site on your own screen &rarr; **Publish** it to the web by pushing to GitHub.
 
-Before we start, two notes:
-
-> ⚠️ This README was copied into your repository and does not update when the template does. If something here does not match what you see, check the [original template README](https://github.com/Cornell-MAE-UG/portfolio/blob/main/README.md).
-
-> ⚠️ You might be tempted to edit your files on GitHub directly, but that skips the testing step, and in a real work setting you would never edit code directly on a server.
+> ⚠️ **Note :** This README was copied into your repository and does not update when the template does. If something here does not match what you see, check the [original template README](https://github.com/Cornell-MAE-UG/portfolio/blob/main/README.md).
 
 ---
 
@@ -122,7 +118,11 @@ Committing saves your work in your repository. It does not put it on the web; th
 
 ## Step 2: Preview Your Site
 
-At any point you can see your portfolio as a website, on your own screen, by running a preview server. This happens **in the terminal**: the one at the bottom of your Codespace, or your own terminal on your laptop. If the Codespace terminal is closed, open one from the menu at the top left (three horizontal lines): `Terminal -> New Terminal`.
+At any point you can see your portfolio as a website, on your own screen, by running a preview server. 
+
+> ⚠️ **Note:** You might be tempted to edit your files on GitHub directly, but that skips the testing step, and in a real work setting you would never edit code directly on a server.
+
+Previewing your site happens **in the terminal**: the one at the bottom of your Codespace, or your own terminal on your laptop. If the Codespace terminal is closed, open one from the menu at the top left (three horizontal lines): `Terminal -> New Terminal`.
 
 Once, to install the packages Jekyll needs. The first time, this may take a few minutes:
 ```bash
