@@ -16,7 +16,8 @@ Before we start, two notes:
 
 ### Create Your Own Repository from the Template
 
-1. Go to the [template repository](https://github.com/Cornell-MAE-UG/portfolio) on GitHub.
+1. Go to the [template repository](https://github.com/Cornell-MAE-UG/portfolio) on GitHub
+    > ⚠️ You probably want to open this link in a new window to keep reading this document.
 2. Click the green **Use this template** button, then **Create a new repository**.
 <img src="assets/readme/use-this-template.png" width="600" />
 
