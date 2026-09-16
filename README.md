@@ -39,7 +39,7 @@ This is what puts your portfolio on the web. Do it now, before you change anythi
 
 3. Click **Save**.
 
-After 1--2 minutes your site is live. **Its address is shown at the top of that same Pages settings page**. Open it: what you see is the template, and the rest of these instructions are how you make it your own.
+After 1–2 minutes your site is live. **Its address is shown at the top of that same Pages settings page**. Open it: what you see is the template, and the rest of these instructions are how you make it your own.
 
 ### Open a Working Copy
 
