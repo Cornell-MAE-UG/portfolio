@@ -56,9 +56,9 @@ You can, of course, clone the repository to your laptop and work in an editor li
 
 ---
 
-## Step 1: Editing the Files to Personalize Your Portfolio
+## Step 1: Make It Your Own
 
-> The `< >` and `[ ]` brackets mark placeholders. Delete them along with the text inside; do not keep them around your own text.
+> Square brackets `[ ]` mark placeholders. Delete the brackets along with the text inside; do not keep them around your own words.
 
 ### Name
 
@@ -70,21 +70,26 @@ Change `title` and `name` in `_config.yml` to your actual name. Your name is tak
 - Replace `assets/images/profile-pic.jpg` with a portrait of yourself.
 
 ### Projects
-- In the `_projects` folder, make one page per project, using the example pages (such as `2022-trig-analysis.md`) as your starting point. They also show how to include code and images in a page.
-- Each project has a main image, set by the `image` variable in the front matter: the block at the top of the page between the `---` lines. Any shape of picture works — it is cropped to match the others.
-- Right next to it, set `imagealt` to a short description of what the image shows, for example `imagealt: Shaded CAD rendering of a 1940s tabletop radio`. A screen reader reads this aloud, and search engines read it, in place of the picture itself.
-- The filename sets the order of projects in your gallery, so start it with the date, as the examples do.
-- Your home page shows your three most recent projects. To pick one yourself, add `featured: true` to its front matter: featured projects come first, and the newest of the rest fill the places left over.
-- Portfolio images live in `assets/images`; delete the ones you don't need. (This README's screenshots live separately, in `assets/readme`.)
-- Delete the example project pages once you have your own.
-- Photograph your work against a plain background, in landscape, one thing per picture. Consistent images are most of what makes a portfolio look finished.
-- For other formatting, see the [Jekyll Markdown documentation](https://jekyllrb.com/docs/markdown/).
+
+Make one page per project in the `_projects` folder, using an example page (such as `2022-trig-analysis.md`) as your starting point. The example pages also show how to put code and images in a page. The filename sets the order of your gallery, so start it with the date, as the examples do.
+
+At the top of each page, between the `---` lines, is the **front matter**. Three of its settings control how the project appears:
+
+- `image` — the project's main picture. Any shape works; it is cropped to match the others.
+- `imagealt` — a short description of what that picture shows, for example `imagealt: Shaded CAD rendering of a 1940s tabletop radio`. A screen reader reads this aloud, and search engines read it, in place of the picture itself.
+- `featured` — your home page shows three projects: the three newest, unless you mark others with `featured: true`.
+
+Once you have pages of your own, **delete the example pages**, and delete the pictures in `assets/images` you are not using. 
+
+> 💡 **Design Tip:** Photograph your work against a plain background, in landscape, one thing per picture. Consistent images are the biggest payoff to making a portfolio look professional.
+
+For more aqdvanced formatting, see the [Jekyll Markdown documentation](https://jekyllrb.com/docs/markdown/).
 
 ### CV
 - Replace `assets/CV.pdf` with your own CV as a PDF.
-- The placeholder text in `_pages/cv.md` is yours to edit or delete.
+- The placeholder text in `_pages/cv.md` is yours to edit or delete, if you just want a PDF CV.
 
-> ⚠️ Your CV becomes a public file on the web, so take out your home address and phone number before you commit it. Replacing the file later does not undo this: every version you have ever committed stays in your repository's history, where anyone can still read it.
+> ⚠️ **Privacy Notice:** Your CV becomes a public file on the web, so take out your home address and phone number before you commit it. Replacing the file later does not undo this: every version you have ever committed stays in your repository's history, where anyone can still read it.
 
 ### Colors and Styling
 
@@ -94,22 +99,24 @@ Set `color_scheme` in `_config.yml` to one of the schemes listed in the comment 
 color_scheme: aqua
 ```
 
-Beyond the schemes, you can change colors, fonts, spacing, and anything else by editing `_sass/custom.scss` — see [Advanced Customization](#advanced-customization) below.
+Beyond the schemes, you can change colors, fonts, spacing, and anything else by editing `_sass/custom.scss`. See [Advanced Customization](#advanced-customization) below.
 
-### Commit Your Changes
+### Save Your Work
 
 Commit often as you work — each commit saves your progress. In the terminal, run:
 
 ```bash
 git add .
-git commit -m "<Commit Message>"
+git commit -m "Add heat exchanger project"
 ```
 
-Replace `<Commit Message>` with a short description of what you changed, for example `Add heat exchanger project`.
+The message in quotes is yours: a short description of what you changed.
 
-> ⚠️ `git add .` stages **every** file in the folder, not only the ones you meant to edit, and anything you commit becomes public and permanent. Keep graded feedback, drafts, and anything else you do not want on the web in the `private/` folder: nothing in there is ever committed or published.
+> ⚠️ `git add .` stages **every** file in the folder, not only the ones you meant to edit, and anything you commit becomes public and permanent. Keep anything you do not want on the web in the `private/` folder: nothing in there is ever committed or published.
 
-In VS Code or a Codespace, you can stage and commit through the Git panel instead — the small branch icon in the left sidebar ([documentation](https://code.visualstudio.com/docs/editor/versioncontrol)).
+In a Codespace or VS Code, you can stage and commit through the Git panel instead — the small branch icon in the left sidebar ([documentation](https://code.visualstudio.com/docs/editor/versioncontrol)).
+
+Committing saves your work in your repository. It does not put it on the web; that happens in Step 3.
 
 ---
 
