@@ -26,7 +26,7 @@ Before we start, two notes:
 5. Leave the repository set to **Public**. On a free GitHub account, only public repositories can be published as a website, so a private one can never go live.
 6. Click **Create repository**.
 
-You now have your own repository — a full, independent copy of the template. Nothing you do to it affects the template, and nothing done to the template changes yours. Everything from here on happens in *your* repository.
+You now have your own repository, a full, independent copy of the template. Nothing you do to it affects the template, and nothing done to the template changes yours. Everything from here on happens in *your* repository.
 
 ### Turn On GitHub Pages
 
@@ -40,7 +40,7 @@ This is what puts your portfolio on the web. Do it now, before you change anythi
 
 3. Click **Save**.
 
-After 1–2 minutes your site is live. **Its address is shown at the top of that same Pages settings page**. Open it: what you see is the template, and the rest of these instructions are how you make it your own.
+After a minute or two your site is live. **Its address is shown at the top of that same Pages settings page**. Open it: what you see is the template, and the rest of these instructions are how you make it your own.
 
 ### Open a Working Copy
 
@@ -83,7 +83,7 @@ Once you have pages of your own, **delete the example pages**, and delete the pi
 
 > 💡 **Design Tip:** Photograph your work against a plain background, in landscape, one thing per picture. Consistent images are the biggest payoff to making a portfolio look professional.
 
-For more aqdvanced formatting, see the [Jekyll Markdown documentation](https://jekyllrb.com/docs/markdown/).
+For more advanced formatting, see the [Jekyll Markdown documentation](https://jekyllrb.com/docs/markdown/).
 
 ### CV
 - Replace `assets/CV.pdf` with your own CV as a PDF.
@@ -103,7 +103,7 @@ Beyond the schemes, you can change colors, fonts, spacing, and anything else by 
 
 ### Save Your Work
 
-Commit often as you work — each commit saves your progress. In the terminal, run:
+Commit often as you work. Each commit saves your progress. In the terminal, run:
 
 ```bash
 git add .
@@ -114,17 +114,17 @@ The message in quotes is yours: a short description of what you changed.
 
 > ⚠️ `git add .` stages **every** file in the folder, not only the ones you meant to edit, and anything you commit becomes public and permanent. Keep anything you do not want on the web in the `private/` folder: nothing in there is ever committed or published.
 
-In a Codespace or VS Code, you can stage and commit through the Git panel instead — the small branch icon in the left sidebar ([documentation](https://code.visualstudio.com/docs/editor/versioncontrol)).
+In a Codespace or VS Code, you can stage and commit through the Git panel instead: the small branch icon in the left sidebar ([documentation](https://code.visualstudio.com/docs/editor/versioncontrol)).
 
 Committing saves your work in your repository. It does not put it on the web; that happens in Step 3.
 
 ---
 
-## Step 2: Running the Site Locally for Testing
+## Step 2: Preview Your Site
 
-At any point you can see your portfolio as a website by running a local web server. This happens **in the terminal** — the one at the bottom of your Codespace, or your own terminal on your laptop. If the Codespace terminal is closed, open one from the menu at the top left (three horizontal lines): `Terminal -> New Terminal`.
+At any point you can see your portfolio as a website, on your own screen, by running a preview server. This happens **in the terminal**: the one at the bottom of your Codespace, or your own terminal on your laptop. If the Codespace terminal is closed, open one from the menu at the top left (three horizontal lines): `Terminal -> New Terminal`.
 
-Once, to install the packages Jekyll needs:
+Once, to install the packages Jekyll needs. The first time, this may take a few minutes:
 ```bash
 bundle install
 ```
@@ -134,7 +134,7 @@ Then, to start the server:
 bundle exec jekyll serve
 ```
 
-Leave the server running while you work: most edits appear as soon as you save the file and reload the page. Changes to `_config.yml` are the exception — click into the terminal, then hold the Control key and press C to stop the server (that is what "ctrl-c" means; it is typed, not clicked), and run the command again.
+Leave the server running while you work. Most edits appear as soon as you save the file and reload the page. Changes to `_config.yml` are the exception. To pick those up, click into the terminal and press ctrl-c to stop the server, then run the command again.
 
 The server prints the address of your site:
 ```text
@@ -142,27 +142,25 @@ The server prints the address of your site:
   Server running... press ctrl-c to stop.
 ```
 
-Cmd-click (Mac) or Ctrl-click (Windows) that address **in the terminal** to open it. From a Codespace, copying it into your own browser will never work: `127.0.0.1` means "this computer", and the Codespace is not your computer. On your laptop, `http://localhost:4000/` works too.
+Cmd-click (Mac) or Ctrl-click (Windows) that address **in the terminal** to open it. Don't just type the address. It won't necessarily work in Codespaces. 
 
 ---
 
 ## Step 3: Publishing Your Portfolio to the Web
 
-Your portfolio does not change on the web until you push your commits to GitHub. What you see on your local test server is not permanent and nobody else can see it.
+Your portfolio does not change on the web until you push your commits to GitHub. The preview server in Step 2 is temporary, and nobody else can see it.
 
 ### Push Your Changes to GitHub
 
-Once everything looks good, commit anything outstanding and push:
+Once everything looks good, commit anything outstanding (Step 1), then push:
 
 ```bash
-git add .
-git commit -m "<Commit Message>"
-git push 
+git push
 ```
 
-> Remember that `git add .` stages everything in the folder. Anything private belongs in `private/`.
+Committing saves your work in your repository. Pushing sends it to GitHub, which rebuilds your live site.
 
-In VS Code or a Codespace, the Git panel can stage, commit, and push for you.
+In a Codespace or VS Code, the Git panel can push for you.
 
 ### Your Published Portfolio Site
 
@@ -179,10 +177,10 @@ To take your site off the web, go to Settings → Pages and use **Unpublish site
 ## If Something Goes Wrong
 
 **My site's address gives a 404, or says "There isn't a GitHub Pages site here".**
-Pages was never turned on. Go to your repository's Settings (not your account settings) → Pages, set Source to "Deploy from a branch", Branch to `main` and the folder to `/ (root)`, and save. If there is no branch to choose, or the option is missing, check that your repository is **Public** — on a free account only public repositories can be published.
+Pages was never turned on. Go to your repository's Settings (not your account settings) → Pages, set Source to "Deploy from a branch", Branch to `main` and the folder to `/ (root)`, and save. If there is no branch to choose, or the option is missing, check that your repository is **Public**. On a free account, only public repositories can be published.
 
 **I pushed my changes but the website never updated.**
-Give it a few minutes and hard-refresh your browser (Cmd-Shift-R or Ctrl-Shift-R). If it is still stale, the build **failed** — GitHub leaves the old version up and says nothing on the site itself. Open your repository's **Actions** tab, look for a red ✗ next to "pages build and deployment", and click it to read the error.
+Give it a few minutes and hard-refresh your browser (Cmd-Shift-R or Ctrl-Shift-R). If it is still stale, the build **failed**. GitHub leaves the old version up and says nothing on the site itself. Open your repository's **Actions** tab, look for a red ✗ next to "pages build and deployment", and click it to read the error.
 
 **I edited `_sass/custom.scss` and now the site will not update at all.**
 An error in that file stops the whole build, so nothing publishes. Look for a missing `}` or `;`, or a `$variable` spelled differently from where it was defined. To get back to a working site, undo your last change to that file, commit, and push.
@@ -193,8 +191,8 @@ Your web address changed with the name, and the published site catches up on its
 **I came back to my Codespace and my changes are gone.**
 Codespaces shut down when idle and are deleted after longer inactivity, taking anything you never committed with them. Commit often, and push before you stop working for the week.
 
-**I cannot create a Codespace — it says I have used up my included hours.**
-Codespaces are free up to a monthly limit on your personal account, and that limit resets each month. Delete any codespaces you are no longer using from [github.com/codespaces](https://github.com/codespaces), and stop yours when you finish working rather than leaving it running. You can also raise the limit, for free, by activating the [GitHub Student Developer Pack](https://education.github.com/pack) — worth doing regardless. If you are stuck in the meantime, you can work on your own laptop instead: see "For Advanced Users" in the setup section.
+**I cannot create a Codespace. It says I have used up my included hours.**
+Codespaces are free up to a monthly limit on your personal account, and that limit resets each month. Delete any codespaces you are no longer using from [github.com/codespaces](https://github.com/codespaces), and stop yours when you finish working rather than leaving it running. You can also raise the limit, for free, by activating the [GitHub Student Developer Pack](https://education.github.com/pack), worth doing regardless. If you are stuck in the meantime, you can work on your own laptop instead: see "For Advanced Users" in the setup section.
 
 **The address the server prints, `http://127.0.0.1:4000/`, will not open.**
 `127.0.0.1` means "this computer", and the Codespace is not your computer, so copying that address into your own browser will never work. Click the link *in the Codespace terminal*, or open the "Ports" tab at the bottom and use the entry for port 4000.
@@ -203,7 +201,7 @@ Codespaces are free up to a monthly limit on your personal account, and that lim
 
 ## Advanced Customization
 
-You can restyle any part of the portfolio by editing `_sass/custom.scss`, which is written in [Sass](https://sass-lang.com/) — a superset of CSS, so ordinary CSS rules work there as they are. For example, change the width of the text by setting the `max-width` of `.container`:
+You can restyle any part of the portfolio by editing `_sass/custom.scss`, which is written in [Sass](https://sass-lang.com/), a superset of CSS, so ordinary CSS rules work there as they are. For example, change the width of the text by setting the `max-width` of `.container`:
 
 ```css
 .container {
