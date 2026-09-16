@@ -4,8 +4,6 @@ This template is the start of your professional portfolio. It is also part of yo
 
 You only need to set it up once, and then your work is a loop: **Edit** your files &rarr; **Preview** the portfolio site on your own screen &rarr; **Publish** it to the web by pushing to GitHub.
 
-> ⚠️ **Note :** This README was copied into your repository and does not update when the template does. If something here does not match what you see, check the [original template README](https://github.com/Cornell-MAE-UG/portfolio/blob/main/README.md).
-
 ---
 
 ## Set Up Your Portfolio (do this once)
@@ -23,6 +21,9 @@ You only need to set it up once, and then your work is a loop: **Edit** your fil
 6. Click **Create repository**.
 
 You now have your own repository, a full, independent copy of the template. Nothing you do to it affects the template, and nothing done to the template changes yours. Everything from here on happens in *your* repository.
+
+> ⚠️ **Note :** This README was copied into your repository and does not update when the template does. If something here does not match what you see, check the [original template README](https://github.com/Cornell-MAE-UG/portfolio/blob/main/README.md).
+
 
 ### Turn On GitHub Pages
 
