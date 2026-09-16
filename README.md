@@ -1,23 +1,18 @@
 # Portfolio Instructions
 
-This is a template for you to start building your professional portfolio. It is also part of your journey at MAE and will be reviewed, as needed, by your instructor and the Undergraduate Program Office.
+This template is the start of your professional portfolio. It is also part of your journey at MAE and will be reviewed, as needed, by your instructor and the Undergraduate Program Office.
 
-Step 1 shows you how to make your own copy of the template; the steps after it show you how to edit, test, and publish it. Once you are up and running, you can delete this README or replace it with your own content.
+You only need to set it up once, and then your work is a loop: **Edit** your files &rarr; **Preview** the portfolio site on your own screen &rarr; **Publish** it to the web by pushing to GitHub.
 
-> ⚠️ Because this README was copied into your repository, it does not update when the template does. If something here does not match what you see, check the [original README](https://github.com/Cornell-MAE-UG/portfolio/blob/main/README.md).
+Before we start, two notes:
 
-## Portfolio Editing Workflow
+> ⚠️ This README was copied into your repository and does not update when the template does. If something here does not match what you see, check the [original template README](https://github.com/Cornell-MAE-UG/portfolio/blob/main/README.md).
 
-1. **Once:** create your own copy of the portfolio repository, and open a working copy you can edit (Step 1).
-2. **Edit** the files in your working copy — text, images, new project pages — and [commit](https://docs.github.com/en/get-started/using-git/about-git#basic-git-commands) often to save your progress (Step 2).
-3. **Test** your changes on a local web server, which only you can see (Step 3).
-4. **Publish** by pushing your commits to GitHub, which updates your live site within a few minutes (Step 4).
-
-Then repeat from 2. You _could_ edit your files on GitHub directly, but that skips the testing step — and in a real work setting you would never edit code directly on a server.
+> ⚠️ You might be tempted to edit your files on GitHub directly, but that skips the testing step, and in a real work setting you would never edit code directly on a server.
 
 ---
 
-## Step 1: Creating Your Portfolio Repository and a Working Copy
+## Set Up Your Portfolio (do this once)
 
 ### Create Your Own Repository from the Template
 
@@ -27,10 +22,24 @@ Then repeat from 2. You _could_ edit your files on GitHub directly, but that ski
 
 3. Under "Owner", choose your own GitHub account.
 4. Give the repository a name. Something like `portfolio` is a good choice, since the name becomes part of your published web address.
-5. Leave the repository set to **Public**. On a free GitHub account, only public repositories can be published as a website, so a private one cannot go live in Step 4.
+5. Leave the repository set to **Public**. On a free GitHub account, only public repositories can be published as a website, so a private one can never go live.
 6. Click **Create repository**.
 
-You now have your own repository — a full, independent copy. Nothing you do to it affects the template, and nothing done to the template changes yours. Everything from here on happens in *your* repository.
+You now have your own repository — a full, independent copy of the template. Nothing you do to it affects the template, and nothing done to the template changes yours. Everything from here on happens in *your* repository.
+
+### Turn On GitHub Pages
+
+This is what puts your portfolio on the web. Do it now, before you change anything: the template is already a working site, so you will have something live to look at from the start. It happens in your repository's settings, not your account settings.
+
+1. Open your repository's **Settings** tab.
+<img src="assets/readme/settings.png" width="600" />
+
+2. Choose **Pages** in the left sidebar. Under "Build and deployment", check that "Source" says **Deploy from a branch**, then set "Branch" to `main` and the folder to `/ (root)`.
+<img src="assets/readme/pages-settings.png" width="600" />
+
+3. Click **Save**.
+
+After 1--2 minutes your site is live. **Its address is shown at the top of that same Pages settings page**. Open it: what you see is the template, and the rest of these instructions are how you make it your own.
 
 ### Open a Working Copy
 
@@ -38,15 +47,15 @@ Your working copy will live in a [Codespace](https://github.com/features/codespa
 
 <img src="assets/readme/codespace-button.png" width="400" />
 
-Working in a Codespace is not the same as editing directly on GitHub: your changes still have to be committed and pushed before they appear online. The same goes for the test server in Step 3 — it is temporary and visible only to you, and nothing is published until you push.
+> 🚨 Working in a Codespace is not the same as editing directly on GitHub. The Codespace is your private test computer. This means your changes still have to be committed and pushed to GitHub before they appear online. The same goes for the preview server in Step 2: it is temporary and visible only to you, and nothing is published until you push.
 
 #### For Advanced Users
 
-You can instead clone the repository to your laptop and work in an editor like [Visual Studio Code](https://code.visualstudio.com/), or in a terminal with the git command line. You may have to sort out some setup that a Codespace handles for you, but you can work offline and previews are faster.
+You can, of course, clone the repository to your laptop and work in an editor like [Visual Studio Code](https://code.visualstudio.com/), or in a terminal with the git command line. You may have to sort out some Ruby setup that a Codespace handles for you, but you can work offline and previews are faster.
 
 ---
 
-## Step 2: Editing the Files to Personalize Your Portfolio
+## Step 1: Editing the Files to Personalize Your Portfolio
 
 > The `< >` and `[ ]` brackets mark placeholders. Delete them along with the text inside; do not keep them around your own text.
 
@@ -103,7 +112,7 @@ In VS Code or a Codespace, you can stage and commit through the Git panel instea
 
 ---
 
-## Step 3: Running the Site Locally for Testing
+## Step 2: Running the Site Locally for Testing
 
 At any point you can see your portfolio as a website by running a local web server. This happens **in the terminal** — the one at the bottom of your Codespace, or your own terminal on your laptop. If the Codespace terminal is closed, open one from the menu at the top left (three horizontal lines): `Terminal -> New Terminal`.
 
@@ -129,9 +138,9 @@ Cmd-click (Mac) or Ctrl-click (Windows) that address **in the terminal** to open
 
 ---
 
-## Step 4: Publishing Your Portfolio to the Web
+## Step 3: Publishing Your Portfolio to the Web
 
-Your portfolio is not live until you push your changes to GitHub and turn on GitHub Pages. What you see on your local test server is not permanent and nobody else can see it.
+Your portfolio does not change on the web until you push your commits to GitHub. What you see on your local test server is not permanent and nobody else can see it.
 
 ### Push Your Changes to GitHub
 
@@ -147,27 +156,15 @@ git push
 
 In VS Code or a Codespace, the Git panel can stage, commit, and push for you.
 
-### Set Up GitHub Pages
-
-You only have to do this once, and only in **your repository's** Settings — not your account settings.
-
-1. Open your repository's **Settings** tab.
-<img src="assets/readme/settings.png" width="600" />
-
-2. Choose **Pages** in the left sidebar. Under "Build and deployment", check that "Source" says **Deploy from a branch**, then set "Branch" to `main` and the folder to `/ (root)`.
-<img src="assets/readme/pages-settings.png" width="600" />
-
-3. Click **Save**.
-
 ### Your Published Portfolio Site
 
-After a few minutes, your portfolio will be live. **Its address is shown at the top of that same Pages settings page** — that is always the correct one. It is built from your GitHub username and the repository's name, so if you rename the repository or move it to another account, the old address stops working and the Pages page shows you the new one. Remember to update your résumé and profiles if you have already put the link there. :tada:
+A few minutes after each push, your changes are live. Your address is built from your GitHub username and the repository's name, so if you rename the repository or move it to another account, the old address stops working and Settings → Pages shows you the new one. Remember to update your résumé and profiles if you have already put the link there. :tada:
 
 **You can now replace this README with something of your own**, but have a look at the sections below first.
 
 ### Taking Your Portfolio Offline
 
-To take your site off the web, go to Settings → Pages and use **Unpublish site**. That removes the public website only: your repository stays exactly as it is, and you can publish again later by setting the branch as above.
+To take your site off the web, go to Settings → Pages and use **Unpublish site**. That removes the public website only: your repository stays exactly as it is, and you can publish again later by setting the branch the same way you did at setup.
 
 ---
 
@@ -189,7 +186,7 @@ Your web address changed with the name, and the published site catches up on its
 Codespaces shut down when idle and are deleted after longer inactivity, taking anything you never committed with them. Commit often, and push before you stop working for the week.
 
 **I cannot create a Codespace — it says I have used up my included hours.**
-Codespaces are free up to a monthly limit on your personal account, and that limit resets each month. Delete any codespaces you are no longer using from [github.com/codespaces](https://github.com/codespaces), and stop yours when you finish working rather than leaving it running. You can also raise the limit, for free, by activating the [GitHub Student Developer Pack](https://education.github.com/pack) — worth doing regardless. If you are stuck in the meantime, you can work on your own laptop instead: see "For Advanced Users" in Step 1.
+Codespaces are free up to a monthly limit on your personal account, and that limit resets each month. Delete any codespaces you are no longer using from [github.com/codespaces](https://github.com/codespaces), and stop yours when you finish working rather than leaving it running. You can also raise the limit, for free, by activating the [GitHub Student Developer Pack](https://education.github.com/pack) — worth doing regardless. If you are stuck in the meantime, you can work on your own laptop instead: see "For Advanced Users" in the setup section.
 
 **The address the server prints, `http://127.0.0.1:4000/`, will not open.**
 `127.0.0.1` means "this computer", and the Codespace is not your computer, so copying that address into your own browser will never work. Click the link *in the Codespace terminal*, or open the "Ports" tab at the bottom and use the entry for port 4000.
