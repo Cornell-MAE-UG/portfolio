@@ -22,13 +22,13 @@ Aenean faucibus luctus est, sed bibendum tellus. Nulla et magna urna. Morbi a ip
 This is how I solved the problem:
 
 ```python
-import numpy as np
-import matplotlib.pyplot as plt
+  import numpy as np
+  import matplotlib.pyplot as plt
 
-x = np.linspace(0, 10, 500)
-plt.plot(x, np.sin(x), label="sin(x)")
-plt.plot(x, np.cos(x), label="cos(x)")
-plt.legend()
+  x = np.linspace(0, 10, 500)
+  plt.plot(x, np.sin(x), label="sin(x)")
+  plt.plot(x, np.cos(x), label="cos(x)")
+  plt.legend()
 ```
 
 Aenean tincidunt aliquam arcu, in euismod dui dapibus eu. In placerat, mi et ultrices consequat, quam ligula cursus mauris, in semper neque nibh at est. Maecenas hendrerit dignissim porta. Phasellus nec fringilla dolor. Etiam efficitur nisi sit amet velit pharetra feugiat. Etiam ultrices turpis at leo semper, eleifend scelerisque neque malesuada. Aliquam molestie congue rhoncus. Donec blandit neque dolor, nec tristique mi pretium ac. Mauris tincidunt ullamcorper magna, nec pellentesque mi sagittis quis.
