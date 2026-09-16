@@ -58,4 +58,3 @@ One or two sentences: what you are studying, and what you are looking for next.
 ## References
 Available upon request.
 
----

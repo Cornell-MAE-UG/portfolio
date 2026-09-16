@@ -73,13 +73,13 @@ Change `title` and `name` in `_config.yml` to your actual name. Your name is tak
 
 Make one page per project in the `_projects` folder, using an example page (such as `2022-trig-analysis.md`) as your starting point. The example pages also show how to put code and images in a page. The filename sets the order of your gallery, so start it with the date, as the examples do.
 
-At the top of each page, between the `---` lines, is the **front matter**. Three of its settings control how the project appears:
+At the top of each page, between the `---` lines, is the **front matter**. Change `title`, `description` and `technologies` to match your project. Three more settings control how it appears:
 
 - `image` — the project's main picture. Any shape works; it is cropped to match the others.
 - `imagealt` — a short description of what that picture shows, for example `imagealt: Shaded CAD rendering of a 1940s tabletop radio`. A screen reader reads this aloud, and search engines read it, in place of the picture itself.
 - `featured` — your home page shows three projects: the three newest, unless you mark others with `featured: true`.
 
-Once you have pages of your own, **delete the example pages**, and delete the pictures in `assets/images` you are not using. 
+Once you have pages of your own, **delete the example pages**, and delete the pictures in `assets/images` you are not using.
 
 > 💡 **Design Tip:** Photograph your work against a plain background, in landscape, one thing per picture. Consistent images are the biggest payoff to making a portfolio look professional.
 
@@ -87,7 +87,7 @@ For more advanced formatting, see the [Jekyll Markdown documentation](https://je
 
 ### CV
 - Replace `assets/CV.pdf` with your own CV as a PDF.
-- The placeholder text in `_pages/cv.md` is yours to edit or delete, if you just want a PDF CV.
+- The example text in `_pages/cv.md` is yours to edit or delete, if you just want a PDF CV.
 
 > ⚠️ **Privacy Notice:** Your CV becomes a public file on the web, so take out your home address and phone number before you commit it. Replacing the file later does not undo this: every version you have ever committed stays in your repository's history, where anyone can still read it.
 
@@ -142,7 +142,7 @@ The server prints the address of your site:
   Server running... press ctrl-c to stop.
 ```
 
-Cmd-click (Mac) or Ctrl-click (Windows) that address **in the terminal** to open it. Don't just type the address. It won't work in a Codespace. 
+Cmd-click (Mac) or Ctrl-click (Windows) that address **in the terminal** to open it. Do not just type the address into your browser. It will not work in a Codespace.
 
 ---
 
