@@ -58,7 +58,7 @@ You can, of course, clone the repository to your laptop and work in an editor li
 
 ## Step 1: Make It Your Own
 
-> Square brackets `[ ]` mark placeholders. Delete the brackets along with the text inside; do not keep them around your own words.
+> Square brackets `[ ]` mark placeholders. Delete the brackets along with the text inside; do not keep them around your own words. Brackets in a link, like `[Download my CV](...)`, are not placeholders.
 
 ### Name
 
@@ -142,7 +142,7 @@ The server prints the address of your site:
   Server running... press ctrl-c to stop.
 ```
 
-Cmd-click (Mac) or Ctrl-click (Windows) that address **in the terminal** to open it. Don't just type the address. It won't necessarily work in Codespaces. 
+Cmd-click (Mac) or Ctrl-click (Windows) that address **in the terminal** to open it. Don't just type the address. It won't work in a Codespace. 
 
 ---
 

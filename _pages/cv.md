@@ -11,7 +11,7 @@ permalink: /cv/
 ---
 
 ## Objective
-Aspiring engineering student with a strong foundation in.... Passionate about ... and eager to apply my knowledge in real-world applications.
+One or two sentences: what you are studying, and what you are looking for next.
 
 ---
 
@@ -30,35 +30,28 @@ Aspiring engineering student with a strong foundation in.... Passionate about ..
 ---
 
 ## Projects
-- **[Project Title]**:  
-  *[Short Description]*  
-  - Key Achievement 1  
-  - Key Achievement 2  
-
-- **[Project Title]**:  
-  *[Short Description]*  
-  - Key Achievement 1  
-  - Key Achievement 2  
+- **Project title**:  
+  *One line about what it was*  
+  - What you did  
+  - What came of it  
 
 ---
 
 ## Work Experience
-- **[Company Name] - Intern**  
-  [Month, Year] - [Month, Year]  
-  - Responsibility 1  
-  - Responsibility 2  
+- **Company name, Intern**  
+  Month, Year to Month, Year  
+  - What you worked on  
+  - What came of it  
 
 ---
 
 ## Achievements & Certifications
-- [Certification Name], [Issuing Organization], [Year]  
-- [Achievement Name], [Competition/Event], [Year]  
+- Certification, issuing organization, year  
 
 ---
 
 ## Extracurricular Activities
-- Member of [Club/Organization Name]  
-- Volunteer for [Event/Organization Name]  
+- Member of a club or project team  
 
 ---
 

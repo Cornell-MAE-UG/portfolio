@@ -2,12 +2,16 @@
 layout: project
 title: Analysis of Functions
 description: Class project with Graphs
-technologies: [MATLAB, python]
-# featured: true   # delete the # to always show this project on your home page
+technologies:
+  - MATLAB
+  - python
+featured: false   # change to true to always show this project on your home page
 image: /assets/images/function-graph.png
 imagealt: Line plot titled "Analysis of Standard Functions" showing sin(x), cos(x) and 0.1*tan(x) for x from 0 to 10
 ---
 
+> 📄 **Example page.** Replace all of it with your own project. The Latin text below is
+> filler, here to show what a finished page looks like.
 
 As part of a class project...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec accumsan leo. Pellentesque ornare orci enim, vitae vestibulum nibh rutrum in. Donec pharetra risus nec ipsum fringilla, et mattis tortor auctor. Duis tortor ante, posuere ut odio a, scelerisque interdum purus. Pellentesque ornare orci enim, vitae vestibulum nibh rutrum in. Donec pharetra risus nec ipsum fringilla, et mattis tortor auctor. Duis tortor ante, posuere ut odio a, scelerisque interdum purus. Aenean faucibus luctus est, sed bibendum tellus. Nulla et magna urna. Morbi a ipsum sollicitudin, rhoncus risus volutpat, ultricies nunc. Quisque mollis finibus ante id imperdiet. Quisque vehicula elit sit amet felis facilisis fermentum.
 
